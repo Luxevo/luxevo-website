@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TechInfra Consulting | Technical Infrastructure for Quebec Startups",
+  title: "Luxévo Inc. | Technical Infrastructure for Quebec Startups",
   description:
     "Reduce cloud costs by 40-70%, accelerate deployments by 10x, and achieve 99.9% uptime. Specialized infrastructure consulting for Quebec FinTech, HealthTech, and FoodTech startups.",
   keywords: "technical infrastructure, DevOps consulting, cloud optimization, Quebec startups, FinTech infrastructure, HealthTech compliance, CI/CD automation",
@@ -15,22 +15,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: "https://your-domain.com",
-    title: "TechInfra Consulting | Infrastructure Transformation for Startups",
+    title: "Luxévo Inc. | Infrastructure Transformation for Startups",
     description:
       "Proven 15-day audit and transformation process for Quebec startups. 5x ROI guarantee with 40-70% cost reduction and 10x deployment acceleration.",
-    siteName: "TechInfra Consulting",
+    siteName: "Luxévo Inc.",
     images: [
       {
         url: "https://your-domain.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TechInfra Consulting - Technical Infrastructure Services",
+        alt: "Luxévo Inc. - Technical Infrastructure Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechInfra Consulting | Infrastructure Transformation for Startups",
+    title: "Luxévo Inc. | Infrastructure Transformation for Startups",
     description: "Reduce cloud costs by 40-70% and accelerate deployments by 10x with our proven transformation process.",
     images: ["https://your-domain.com/twitter-image.jpg"],
   },

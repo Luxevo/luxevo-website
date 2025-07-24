@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Zap } from 'lucide-react'
@@ -21,8 +22,14 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2" aria-label="TechInfra Consulting Homepage">
-            <span className="text-2xl font-bold">TechInfra</span>
+          <Link href="/" className="flex items-center space-x-2" aria-label="Luxévo Inc. Homepage">
+            <Image
+              src="/logo-no-bg.png"
+              alt="Luxévo Inc. Logo"
+              width={150}
+              height={150}
+              priority
+            />
           </Link>
         </div>
 

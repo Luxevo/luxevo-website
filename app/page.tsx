@@ -105,60 +105,198 @@ export default function Home() {
         {/* Testimonials */}
         <Testimonials />
 
-        {/* Contact/Pricing Section */}
+        {/* Transformation Packages Section */}
+        <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted/20" aria-labelledby="packages-heading">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
+                  Pricing
+                </div>
+                <h2 id="packages-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Transformation Packages
+                </h2>
+                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                  Tailored solutions for Quebec startups and scale-ups at every growth stage.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-3 mb-16">
+              {/* Starter Package */}
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+                <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
+                  <div className="flex flex-col h-full">
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold mb-2">Starter Package</h3>
+                      <div className="text-4xl font-bold text-primary mb-2">$50K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <p className="text-muted-foreground">Early-stage startups</p>
+                      <p className="text-sm text-muted-foreground">≤10 developers</p>
+                    </div>
+                    <div className="flex-1">
+                      <ul className="space-y-3 text-sm">
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>15-day comprehensive audit</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Basic CI/CD setup</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Cloud cost optimization</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Security baseline</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Growth Package */}
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-accent/30 to-primary/30 rounded-2xl blur opacity-100 transition duration-1000"></div>
+                <div className="relative bg-background border-2 border-accent rounded-2xl p-8 h-full shadow-xl">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-accent text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular</span>
+                  </div>
+                  <div className="flex flex-col h-full">
+                    <div className="text-center mb-6 pt-4">
+                      <h3 className="text-2xl font-bold mb-2">Growth Package</h3>
+                      <div className="text-4xl font-bold text-accent mb-2">$120K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <p className="text-muted-foreground">Growing startups</p>
+                      <p className="text-sm text-muted-foreground">10-50 developers</p>
+                    </div>
+                    <div className="flex-1">
+                      <ul className="space-y-3 text-sm">
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Everything in Starter</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Advanced monitoring setup</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Infrastructure as Code</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Team training included</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Compliance frameworks</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Enterprise Package */}
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+                <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
+                  <div className="flex flex-col h-full">
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold mb-2">Enterprise Package</h3>
+                      <div className="text-4xl font-bold text-primary mb-2">$250K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <p className="text-muted-foreground">Scale-ups</p>
+                      <p className="text-sm text-muted-foreground">50+ developers</p>
+                    </div>
+                    <div className="flex-1">
+                      <ul className="space-y-3 text-sm">
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Everything in Growth</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Multi-region deployments</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Advanced security hardening</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>24/7 monitoring & support</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Custom integrations</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Guarantees and Benefits */}
+            <div className="bg-muted/30 dark:bg-muted/10 rounded-2xl p-8 mb-16">
+              <h3 className="text-2xl font-bold text-center mb-8">Our Guarantees & Benefits</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="flex flex-col items-center text-center">
+                  <Users className="h-8 w-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-2">5x ROI Guarantee</h4>
+                  <p className="text-sm text-muted-foreground">Or full refund</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <Database className="h-8 w-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-2">40-70% Cost Reduction</h4>
+                  <p className="text-sm text-muted-foreground">Typical cloud savings</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <Bot className="h-8 w-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-2">10-15x Faster</h4>
+                  <p className="text-sm text-muted-foreground">Deployment speeds</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <Shield className="h-8 w-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-2">99.9% Uptime</h4>
+                  <p className="text-sm text-muted-foreground">Achievement target</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center mb-16">
+              <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-4">Start Your Transformation</h3>
+                <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Begin with our comprehensive 15-day Technical Infrastructure Audit to identify opportunities and create your transformation roadmap.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div className="text-xl font-bold text-primary">$15K-25K CAD</div>
+                  <div className="text-muted-foreground">•</div>
+                  <div className="text-muted-foreground">Full audit with ROI analysis</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
         <section id="contact" className="py-20 bg-muted/50 dark:bg-muted/10" aria-labelledby="contact-heading">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-start">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                    Transformation Packages
-                  </h2>
-                  <p className="text-muted-foreground md:text-xl">
-                    Tailored solutions for Quebec startups and scale-ups at every growth stage.
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-primary pl-4">
-                    <h3 className="font-bold text-lg">Starter Package - $50K CAD</h3>
-                    <p className="text-muted-foreground">Early-stage startups ≤10 developers</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-4">
-                    <h3 className="font-bold text-lg">Growth Package - $120K CAD</h3>
-                    <p className="text-muted-foreground">Growing startups 10-50 developers</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-4">
-                    <h3 className="font-bold text-lg">Enterprise Package - $250K CAD</h3>
-                    <p className="text-muted-foreground">Scale-ups 50+ developers</p>
-                  </div>
-                </div>
-                <div className="space-y-4 pt-4">
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
-                    <span>5x minimum ROI guarantee or full refund</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Database className="h-5 w-5 text-primary" />
-                    <span>40-70% cloud cost reduction typical</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Bot className="h-5 w-5 text-primary" />
-                    <span>10-15x faster deployment speeds</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-primary" />
-                    <span>99.9% uptime achievement</span>
-                  </div>
-                </div>
-                <div className="pt-4">
-                  <p className="font-medium">
-                    Start with our 15-day Technical Infrastructure Audit ($15K-25K CAD)
-                  </p>
-                </div>
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                  Get Your Infrastructure Audit
+                </h2>
+                <p className="text-muted-foreground md:text-xl">
+                  Ready to transform your infrastructure? Contact us to schedule your comprehensive audit.
+                </p>
               </div>
-              <div className="lg:ml-10">
-                <ContactForm />
-              </div>
+              <ContactForm />
             </div>
           </div>
         </section>
