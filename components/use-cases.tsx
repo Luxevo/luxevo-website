@@ -12,47 +12,49 @@ import {
   EducationIcon,
 } from "@/components/use-case-icons"
 
-export default function UseCases() {
+import { useTranslations, type Locale } from "@/lib/i18n"
+
+interface UseCasesProps {
+  locale: Locale
+}
+
+export default function UseCases({ locale }: UseCasesProps) {
+  const t = useTranslations(locale)
   const useCases = [
     {
       icon: <BuildingIcon />,
-      title: "FinTech Startups",
-      description:
-        "Complete financial platforms with secure payment processing, compliance automation, fraud detection, and mobile banking solutions.",
+      title: t.specializations.items.fintech.title,
+      description: t.specializations.items.fintech.description,
       accentColor: "rgba(59, 130, 246, 0.5)",
     },
     {
       icon: <GovernmentIcon />,
-      title: "HealthTech Companies",
-      description:
-        "HIPAA/PIPEDA compliant platforms, patient portals, telemedicine apps, medical device integration, and health data analytics.",
+      title: t.specializations.items.healthtech.title,
+      description: t.specializations.items.healthtech.description,
       accentColor: "rgba(139, 92, 246, 0.5)",
     },
     {
       icon: <FinanceIcon />,
-      title: "SaaS Companies",
-      description:
-        "Scalable SaaS platforms with user management, billing systems, analytics dashboards, and automated customer onboarding.",
+      title: t.specializations.items.saas.title,
+      description: t.specializations.items.saas.description,
       accentColor: "rgba(245, 158, 11, 0.5)",
     },
     {
       icon: <HealthcareIcon />,
-      title: "E-commerce & Retail",
-      description:
-        "Modern e-commerce platforms, inventory management systems, customer analytics, and automated order processing solutions.",
+      title: t.specializations.items.ecommerce.title,
+      description: t.specializations.items.ecommerce.description,
       accentColor: "rgba(239, 68, 68, 0.5)",
     },
     {
       icon: <LegalIcon />,
-      title: "Enterprise Solutions",
-      description:
-        "Custom enterprise platforms, workflow automation, integration systems, and AI-powered business intelligence solutions.",
+      title: t.specializations.items.enterprise.title,
+      description: t.specializations.items.enterprise.description,
       accentColor: "rgba(132, 204, 22, 0.5)",
     },
     {
       icon: <EducationIcon />,
-      title: "Quebec Tech Ecosystem",
-      description: "Local expertise for Quebec-based startups with understanding of regional compliance, funding, and business requirements.",
+      title: t.specializations.items.quebec.title,
+      description: t.specializations.items.quebec.description,
       accentColor: "rgba(14, 165, 233, 0.5)",
     },
   ]
@@ -83,7 +85,7 @@ export default function UseCases() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/10">
+    <section id="use-cases" className="py-20 bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/10">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
@@ -94,11 +96,11 @@ export default function UseCases() {
         >
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
-              Use Cases
+              {t.specializations.badge}
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Specialized Industry Solutions</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t.specializations.title}</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Tailored infrastructure solutions for Quebec's leading startup sectors with industry-specific compliance and expertise.
+              {t.specializations.subtitle}
             </p>
           </div>
         </motion.div>

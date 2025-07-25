@@ -1,44 +1,28 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { useTranslations, type Locale } from "@/lib/i18n"
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      quote:
-        "They built our entire SaaS platform from scratch in 8 weeks. The user experience is incredible, and our customer onboarding is now 90% automated. Game changer for our business.",
-      name: "Sarah Chen",
-      title: "CTO, FinTech Startup",
-      avatar: "SC",
-    },
-    {
-      quote:
-        "The team delivered our mobile app and backend infrastructure on time and under budget. Their healthcare compliance expertise was crucial for our Series A funding.",
-      name: "Michael Dubois",
-      title: "VP Engineering, HealthTech Scale-up",
-      avatar: "MD",
-    },
-    {
-      quote:
-        "From concept to launch in 6 weeks. Their automation systems reduced our operational costs by 60% and improved customer satisfaction by 40%. Outstanding results.",
-      name: "David Rodriguez",
-      title: "Head of Product, E-commerce Platform",
-      avatar: "DR",
-    },
-  ]
+interface TestimonialsProps {
+  locale: Locale
+}
+
+export default function Testimonials({ locale }: TestimonialsProps) {
+  const t = useTranslations(locale)
+  const testimonials = t.testimonials.items
 
   return (
-    <section className="py-20">
+    <section id="testimonials" className="py-20">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
-              Testimonials
+              {t.testimonials.badge}
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Trusted by Quebec Startups
+              {t.testimonials.title}
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              See what our clients say about their development and automation results.
+              {t.testimonials.subtitle}
             </p>
           </div>
         </div>

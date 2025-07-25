@@ -15,13 +15,17 @@ import FeaturesSection from "@/components/features-section"
 import StructuredData from "@/components/structured-data"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useTranslations, defaultLocale, type Locale } from "@/lib/i18n"
 
 export default function Home() {
+  const [locale, setLocale] = React.useState<Locale>(defaultLocale)
+  const t = useTranslations(locale)
+
   return (
     <>
       <StructuredData />
       <div className="flex min-h-screen flex-col">
-        <Navbar />
+        <Navbar locale={locale} onLocaleChange={setLocale} />
 
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -29,12 +33,12 @@ export default function Home() {
           <FramerSpotlight />
           <div className="container px-4 md:px-6 py-16 md:py-20">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-6">Full-Stack Development & Technical Solutions</div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-6">{t.hero.badge}</div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-                Build, Scale, and Automate Your Startup's Technology
+                {t.hero.title}
               </h1>
               <p className="text-xl text-muted-foreground md:text-2xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-2xl mb-12">
-                From web apps to mobile platforms, SaaS solutions to automation systems - we handle your complete technical journey with proven results and rapid delivery.
+                {t.hero.subtitle}
               </p>
 
               <TypingPromptInput />
@@ -44,12 +48,12 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/0 via-brand-orange/20 to-brand-orange/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-100%] group-hover:translate-x-[100%]"></div>
                   <Zap className="h-5 w-5 text-white relative z-10" />
                   <div className="flex flex-col items-start relative z-10">
-                    <span className="text-[15px] font-medium">Start Your Project</span>
-                    <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
+                    <span className="text-[15px] font-medium">{t.hero.startProject}</span>
+                    <span className="text-xs text-blue-100 -mt-0.5">{t.hero.freeConsultation}</span>
                   </div>
                 </Button>
                 <Button className="px-5 py-6 h-[60px] rounded-xl border-2 border-brand-orange bg-transparent hover:bg-brand-orange hover:text-white text-[15px] font-medium text-brand-orange transition-all duration-300">
-                  View Our Work
+                  {t.hero.viewWork}
                 </Button>
               </div>
             </div>
@@ -57,7 +61,7 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <FeaturesSection />
+        <FeaturesSection locale={locale} />
 
         {/* How It Works */}
         <section className="py-20" id="how-it-works" aria-labelledby="how-it-works-heading">
@@ -65,10 +69,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 id="how-it-works-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Our Proven Development Process
+                  {t.howItWorks.title}
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  From concept to launch in 4-12 weeks with rapid iteration and continuous delivery.
+                  {t.howItWorks.subtitle}
                 </p>
               </div>
             </div>
@@ -77,27 +81,27 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">1</span>
                 </div>
-                <h3 className="text-xl font-bold">Discovery & Planning (1-2 weeks)</h3>
+                <h3 className="text-xl font-bold">{t.howItWorks.steps.discovery.title}</h3>
                 <p className="text-muted-foreground">
-                  Requirements analysis, technical architecture design, and project roadmap creation with detailed specifications and timeline.
+                  {t.howItWorks.steps.discovery.description}
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">2</span>
                 </div>
-                <h3 className="text-xl font-bold">Development & Testing (3-10 weeks)</h3>
+                <h3 className="text-xl font-bold">{t.howItWorks.steps.development.title}</h3>
                 <p className="text-muted-foreground">
-                  Agile development with weekly demos, automated testing, CI/CD pipelines, and continuous feedback integration.
+                  {t.howItWorks.steps.development.description}
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">3</span>
                 </div>
-                <h3 className="text-xl font-bold">Launch & Support (Ongoing)</h3>
+                <h3 className="text-xl font-bold">{t.howItWorks.steps.deployment.title}</h3>
                 <p className="text-muted-foreground">
-                  Production deployment, monitoring setup, performance optimization, and ongoing maintenance with feature updates.
+                  {t.howItWorks.steps.deployment.description}
                 </p>
               </div>
             </div>
@@ -105,21 +109,21 @@ export default function Home() {
         </section>
 
         {/* Use Cases */}
-        <UseCases />
+        <UseCases locale={locale} />
 
         {/* Partners & Clients */}
-        <section className="py-20 bg-muted/30 dark:bg-muted/10" aria-labelledby="partners-heading">
+        <section id="partners" className="py-20 bg-muted/30 dark:bg-muted/10" aria-labelledby="partners-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
-                  Partners & Clients
+                  {t.partners.badge}
                 </div>
                 <h2 id="partners-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Trusted by Leading Companies
+                  {t.partners.title}
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  We've partnered with innovative companies across Quebec and beyond to deliver exceptional technical solutions.
+                  {t.partners.subtitle}
                 </p>
               </div>
             </div>
@@ -350,7 +354,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <Testimonials />
+        <Testimonials locale={locale} />
 
         {/* Service Packages Section */}
         <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted/20" aria-labelledby="packages-heading">
@@ -358,13 +362,13 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
-                  Services
+                  {t.packages.badge}
                 </div>
                 <h2 id="packages-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Development Solutions
+                  {t.packages.title}
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Comprehensive technical solutions for Quebec startups and scale-ups at every growth stage.
+                  {t.packages.subtitle}
                 </p>
               </div>
             </div>
@@ -532,10 +536,10 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
                 <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                  Start Your Project
+                  {t.contact.title}
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
-                  Ready to build your next big thing? Contact us to discuss your project and get a free consultation.
+                  {t.contact.subtitle}
                 </p>
               </div>
               <ContactForm />

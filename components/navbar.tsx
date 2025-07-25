@@ -7,16 +7,23 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Zap } from 'lucide-react'
 import { ThemeToggle } from "@/components/theme-toggle"
+import LanguageSwitcher from "@/components/language-switcher"
+import { useTranslations, type Locale } from "@/lib/i18n"
 
-export default function Navbar() {
+interface NavbarProps {
+  locale: Locale
+  onLocaleChange: (locale: Locale) => void
+}
+
+export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations(locale)
 
   const navItems = [
-    { label: "Features", href: "#features" },
-    { label: "Use Cases", href: "#use-cases" },
-    { label: "Partners", href: "#partners" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
+    { label: t.nav.features, href: "#features" },
+    { label: t.nav.specializations, href: "#use-cases" },
+    { label: t.nav.packages, href: "#packages" },
+    { label: t.nav.contact, href: "#contact" },
   ]
 
   return (
@@ -43,6 +50,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher currentLocale={locale} onLocaleChange={onLocaleChange} />
           <ThemeToggle />
 
           <Button

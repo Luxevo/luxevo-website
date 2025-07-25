@@ -9,8 +9,14 @@ import {
   LockIcon,
   ZapIcon,
 } from "@/components/feature-icons"
+import { useTranslations, type Locale } from "@/lib/i18n"
 
-export default function FeaturesSection() {
+interface FeaturesSectionProps {
+  locale: Locale
+}
+
+export default function FeaturesSection({ locale }: FeaturesSectionProps) {
+  const t = useTranslations(locale)
   const features = [
     {
       icon: <BotIcon />,
@@ -69,13 +75,13 @@ export default function FeaturesSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
-              Key Features
+              {t.features.badge}
             </div>
             <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Complete Technical Services
+              {t.features.title}
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              End-to-end development solutions for Quebec startups and scale-ups to build, scale, and automate their technology.
+              {t.features.subtitle}
             </p>
           </div>
         </div>
