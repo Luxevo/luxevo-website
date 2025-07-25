@@ -1,3 +1,6 @@
+"use client"
+
+import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Bot, Database, Shield, Users, Zap } from 'lucide-react'
 import ContactForm from "@/components/contact-form"
@@ -10,6 +13,8 @@ import FramerSpotlight from "@/components/framer-spotlight"
 import CssGridBackground from "@/components/css-grid-background"
 import FeaturesSection from "@/components/features-section"
 import StructuredData from "@/components/structured-data"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
@@ -119,60 +124,207 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
-              {/* UPGR8 */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  UP
+            <div className="relative overflow-hidden">
+              <motion.div
+                className="flex gap-8"
+                animate={{ x: [0, -1200] }}
+                transition={{ 
+                  duration: 15, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+              >
+                {/* UPGR8 */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/upgr8.png" 
+                        alt="UPGR8 Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">UPGR8</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      SaaS Platform
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">UPGR8</p>
-                <p className="text-xs text-muted-foreground text-center">SaaS Hockey Platform</p>
-              </div>
 
-              {/* Gosholo */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  GO
+                {/* Gosholo */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/gosholo.png" 
+                        alt="Gosholo Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Gosholo</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      Mobile App
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">Gosholo</p>
-                <p className="text-xs text-muted-foreground text-center">SaaS + Mobile App</p>
-              </div>
 
-              {/* Mordu Sport */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  MS
+                {/* Mordu Sport */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/morduSport.png" 
+                        alt="Mordu Sport Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Mordu Sport</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      Mobile App
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">Mordu Sport</p>
-                <p className="text-xs text-muted-foreground text-center">Mobile App</p>
-              </div>
 
-              {/* Prediction Expert */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  PE
+                {/* Webnique */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/webnique.png" 
+                        alt="Webnique Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Webnique</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                      Web Agency
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">Prediction Expert</p>
-                <p className="text-xs text-muted-foreground text-center">Mobile App</p>
-              </div>
 
-              {/* Webnique */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  WB
+                {/* WELPCO */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/welpco.png" 
+                        alt="WELPCO Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">WELPCO</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      SaaS Platform
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">Webnique</p>
-                <p className="text-xs text-muted-foreground text-center">Web Development</p>
-              </div>
 
-              {/* WELPCO */}
-              <div className="flex flex-col items-center space-y-2 group">
-                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  WE
+                {/* Duplicate items for seamless loop */}
+                {/* UPGR8 */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/upgr8.png" 
+                        alt="UPGR8 Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">UPGR8</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      SaaS Platform
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-center">WELPCO</p>
-                <p className="text-xs text-muted-foreground text-center">SaaS Platform</p>
-              </div>
+
+                {/* Gosholo */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/gosholo.png" 
+                        alt="Gosholo Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Gosholo</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      Mobile App
+                    </span>
+                  </div>
+                </div>
+
+                {/* Mordu Sport */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/morduSport.png" 
+                        alt="Mordu Sport Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Mordu Sport</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      Mobile App
+                    </span>
+                  </div>
+                </div>
+
+                {/* Webnique */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/webnique.png" 
+                        alt="Webnique Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Webnique</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+                      Web Agency
+                    </span>
+                  </div>
+                </div>
+
+                {/* WELPCO */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/welpco.png" 
+                        alt="WELPCO Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">WELPCO</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      SaaS Platform
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
             {/* Partnership Stats */}

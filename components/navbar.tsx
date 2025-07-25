@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2" aria-label="Luxévo Inc. Homepage">
             <Image
-              src="/logo-no-bg.png"
+              src="/clients-logo/luxevo.png"
               alt="Luxévo Inc. Logo"
               width={150}
               height={150}
