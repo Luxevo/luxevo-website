@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Use pure white as base */
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 235 97 255; /* #5361ff */
+    --primary: 235 97% 65%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -22,7 +22,7 @@
     --muted: 240 30% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 17 98 166; /* #fe7d53 */
+    --accent: 17 98% 66%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,7 +30,7 @@
 
     --border: 240 20% 90%;
     --input: 240 20% 90%;
-    --ring: 235 97 255;
+    --ring: 235 97% 65%;
 
     --radius: 0.5rem;
   }
@@ -45,8 +45,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 235 97 255;
-    --primary-foreground: 210 40% 98%;
+    --primary: 235 97% 75%;
+    --primary-foreground: 222.2 84% 4.9%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -54,15 +54,15 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 17 98 166;
-    --accent-foreground: 210 40% 98%;
+    --accent: 17 98% 76%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 235 97 255;
+    --ring: 235 97% 75%;
   }
 }
 
@@ -71,30 +71,29 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    background-color: #f6ede4; /* Use your exact cream color */
+    @apply text-foreground bg-background;
   }
 }
 
-/* Update grid background to use brand colors */
+/* Grid background using CSS variables for better dark mode support */
 .grid-background {
-  background-image: linear-gradient(to right, rgba(83, 97, 255, 0.2) 0.5px, transparent 0.5px),
-    linear-gradient(to bottom, rgba(83, 97, 255, 0.2) 0.5px, transparent 0.5px) !important;
+  background-image: linear-gradient(to right, hsl(var(--primary) / 0.2) 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, hsl(var(--primary) / 0.2) 0.5px, transparent 0.5px) !important;
   background-size: 80px 80px !important;
 }
 
 .grid-gradient {
-  background: radial-gradient(70% 70% at 50% 50%, transparent 0%, rgba(83, 97, 255, 0.05) 100%) !important;
+  background: radial-gradient(70% 70% at 50% 50%, transparent 0%, hsl(var(--primary) / 0.05) 100%) !important;
 }
 
 /* Dark mode adjustments */
 .dark .grid-background {
-  background-image: linear-gradient(to right, rgba(83, 97, 255, 0.3) 0.5px, transparent 0.5px),
-    linear-gradient(to bottom, rgba(83, 97, 255, 0.3) 0.5px, transparent 0.5px) !important;
+  background-image: linear-gradient(to right, hsl(var(--primary) / 0.3) 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, hsl(var(--primary) / 0.3) 0.5px, transparent 0.5px) !important;
 }
 
 .dark .grid-gradient {
-  background: radial-gradient(70% 70% at 50% 50%, transparent 0%, rgba(83, 97, 255, 0.08) 100%) !important;
+  background: radial-gradient(70% 70% at 50% 50%, transparent 0%, hsl(var(--primary) / 0.08) 100%) !important;
 }
 
 /* Card styling improvements for dark mode */
@@ -111,9 +110,9 @@
 .frost-glass {
   @apply backdrop-blur-md border shadow-sm;
   /* Light mode specific */
-  @apply bg-white/80 border-primary/10 text-gray-800 shadow-[0_4px_20px_rgba(36,101,237,0.2)];
+  @apply bg-white/80 border-primary/10 text-foreground shadow-[0_4px_20px_hsl(var(--primary)/0.2)];
   /* Dark mode specific */
-  @apply dark:bg-black/20 dark:border-white/10 dark:text-white dark:shadow-[0_4px_20px_rgba(36,101,237,0.3)];
+  @apply dark:bg-black/20 dark:border-white/10 dark:text-foreground dark:shadow-[0_4px_20px_hsl(var(--primary)/0.3)];
 }
 
 /* Input focus effect */
@@ -123,13 +122,23 @@
 
 /* Brand-specific styling */
 .brand-gradient {
-  background: linear-gradient(135deg, #5361ff 0%, #fe7d53 100%);
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
 }
 
+/* Light mode cream background */
 .brand-cream-bg {
-  background-color: #f6ede4;
+  background-color: hsl(30 30% 95%);
 }
 
 .brand-cream-section {
-  background-color: #f6ede4;
+  background-color: hsl(30 30% 95%);
+}
+
+/* Dark mode alternatives */
+.dark .brand-cream-bg {
+  background-color: hsl(222.2 84% 6%);
+}
+
+.dark .brand-cream-section {
+  background-color: hsl(222.2 84% 6%);
 }

@@ -24,12 +24,12 @@ export default function Home() {
           <FramerSpotlight />
           <div className="container px-4 md:px-6 py-16 md:py-20">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-6">Technical Infrastructure Consulting</div>
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-6">Full-Stack Development & Technical Solutions</div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-                Transform Your Startup's Technical Infrastructure
+                Build, Scale, and Automate Your Startup's Technology
               </h1>
               <p className="text-xl text-muted-foreground md:text-2xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-2xl mb-12">
-                Reduce cloud costs by 40-70%, accelerate deployments by 10x, and achieve 99.9% uptime with our proven 15-day audit and transformation process.
+                From web apps to mobile platforms, SaaS solutions to automation systems - we handle your complete technical journey with proven results and rapid delivery.
               </p>
 
               <TypingPromptInput />
@@ -39,12 +39,12 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/0 via-brand-orange/20 to-brand-orange/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-100%] group-hover:translate-x-[100%]"></div>
                   <Zap className="h-5 w-5 text-white relative z-10" />
                   <div className="flex flex-col items-start relative z-10">
-                    <span className="text-[15px] font-medium">Get Your Audit</span>
-                    <span className="text-xs text-blue-100 -mt-0.5">15-day assessment</span>
+                    <span className="text-[15px] font-medium">Start Your Project</span>
+                    <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
                   </div>
                 </Button>
                 <Button className="px-5 py-6 h-[60px] rounded-xl border-2 border-brand-orange bg-transparent hover:bg-brand-orange hover:text-white text-[15px] font-medium text-brand-orange transition-all duration-300">
-                  View Case Studies
+                  View Our Work
                 </Button>
               </div>
             </div>
@@ -60,10 +60,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="space-y-2">
                 <h2 id="how-it-works-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Our Proven 3-Phase Process
+                  Our Proven Development Process
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  From comprehensive audit to full transformation in 60-90 days.
+                  From concept to launch in 4-12 weeks with rapid iteration and continuous delivery.
                 </p>
               </div>
             </div>
@@ -72,27 +72,27 @@ export default function Home() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">1</span>
                 </div>
-                <h3 className="text-xl font-bold">Comprehensive Audit (15 days)</h3>
+                <h3 className="text-xl font-bold">Discovery & Planning (1-2 weeks)</h3>
                 <p className="text-muted-foreground">
-                  Analyze 150+ critical infrastructure points, security assessment, and cost optimization analysis with detailed technical report.
+                  Requirements analysis, technical architecture design, and project roadmap creation with detailed specifications and timeline.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">2</span>
                 </div>
-                <h3 className="text-xl font-bold">Transformation (30-90 days)</h3>
+                <h3 className="text-xl font-bold">Development & Testing (3-10 weeks)</h3>
                 <p className="text-muted-foreground">
-                  Implement Infrastructure as Code, CI/CD automation, monitoring setup, and security hardening with team training.
+                  Agile development with weekly demos, automated testing, CI/CD pipelines, and continuous feedback integration.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <span className="text-2xl font-bold">3</span>
                 </div>
-                <h3 className="text-xl font-bold">Knowledge Transfer (30 days)</h3>
+                <h3 className="text-xl font-bold">Launch & Support (Ongoing)</h3>
                 <p className="text-muted-foreground">
-                  Complete documentation, hands-on team training, process implementation, and ongoing support setup.
+                  Production deployment, monitoring setup, performance optimization, and ongoing maintenance with feature updates.
                 </p>
               </div>
             </div>
@@ -102,22 +102,117 @@ export default function Home() {
         {/* Use Cases */}
         <UseCases />
 
+        {/* Partners & Clients */}
+        <section className="py-20 bg-muted/30 dark:bg-muted/10" aria-labelledby="partners-heading">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
+                  Partners & Clients
+                </div>
+                <h2 id="partners-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Trusted by Leading Companies
+                </h2>
+                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                  We've partnered with innovative companies across Quebec and beyond to deliver exceptional technical solutions.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
+              {/* UPGR8 */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  UP
+                </div>
+                <p className="text-sm font-medium text-center">UPGR8</p>
+                <p className="text-xs text-muted-foreground text-center">SaaS Hockey Platform</p>
+              </div>
+
+              {/* Gosholo */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  GO
+                </div>
+                <p className="text-sm font-medium text-center">Gosholo</p>
+                <p className="text-xs text-muted-foreground text-center">SaaS + Mobile App</p>
+              </div>
+
+              {/* Mordu Sport */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  MS
+                </div>
+                <p className="text-sm font-medium text-center">Mordu Sport</p>
+                <p className="text-xs text-muted-foreground text-center">Mobile App</p>
+              </div>
+
+              {/* Prediction Expert */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  PE
+                </div>
+                <p className="text-sm font-medium text-center">Prediction Expert</p>
+                <p className="text-xs text-muted-foreground text-center">Mobile App</p>
+              </div>
+
+              {/* Webnique */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  WB
+                </div>
+                <p className="text-sm font-medium text-center">Webnique</p>
+                <p className="text-xs text-muted-foreground text-center">Web Development</p>
+              </div>
+
+              {/* WELPCO */}
+              <div className="flex flex-col items-center space-y-2 group">
+                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  WE
+                </div>
+                <p className="text-sm font-medium text-center">WELPCO</p>
+                <p className="text-xs text-muted-foreground text-center">SaaS Platform</p>
+              </div>
+            </div>
+
+            {/* Partnership Stats */}
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">50+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">95%</div>
+                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">3+</div>
+                <div className="text-sm text-muted-foreground">Years Partnership</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-primary">24/7</div>
+                <div className="text-sm text-muted-foreground">Support Available</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials */}
         <Testimonials />
 
-        {/* Transformation Packages Section */}
+        {/* Service Packages Section */}
         <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted/20" aria-labelledby="packages-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
-                  Pricing
+                  Services
                 </div>
                 <h2 id="packages-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Transformation Packages
+                  Development Solutions
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Tailored solutions for Quebec startups and scale-ups at every growth stage.
+                  Comprehensive technical solutions for Quebec startups and scale-ups at every growth stage.
                 </p>
               </div>
             </div>
@@ -129,8 +224,7 @@ export default function Home() {
                 <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">Starter Package</h3>
-                      <div className="text-4xl font-bold text-primary mb-2">$50K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <h3 className="text-2xl font-bold mb-2">MVP Development</h3>
                       <p className="text-muted-foreground">Early-stage startups</p>
                       <p className="text-sm text-muted-foreground">≤10 developers</p>
                     </div>
@@ -138,19 +232,19 @@ export default function Home() {
                       <ul className="space-y-3 text-sm">
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>15-day comprehensive audit</span>
+                          <span>Web app or mobile MVP</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Basic CI/CD setup</span>
+                          <span>Basic automation setup</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Cloud cost optimization</span>
+                          <span>Cloud infrastructure</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Security baseline</span>
+                          <span>Security & compliance</span>
                         </li>
                       </ul>
                     </div>
@@ -167,8 +261,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6 pt-4">
-                      <h3 className="text-2xl font-bold mb-2">Growth Package</h3>
-                      <div className="text-4xl font-bold text-accent mb-2">$120K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <h3 className="text-2xl font-bold mb-2">SaaS Platform</h3>
                       <p className="text-muted-foreground">Growing startups</p>
                       <p className="text-sm text-muted-foreground">10-50 developers</p>
                     </div>
@@ -176,23 +269,23 @@ export default function Home() {
                       <ul className="space-y-3 text-sm">
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Everything in Starter</span>
+                          <span>Everything in MVP</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Advanced monitoring setup</span>
+                          <span>Full SaaS platform</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Infrastructure as Code</span>
+                          <span>Advanced automation</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Team training included</span>
+                          <span>Mobile app companion</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Compliance frameworks</span>
+                          <span>Analytics & monitoring</span>
                         </li>
                       </ul>
                     </div>
@@ -206,8 +299,7 @@ export default function Home() {
                 <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">Enterprise Package</h3>
-                      <div className="text-4xl font-bold text-primary mb-2">$250K <span className="text-lg text-muted-foreground">CAD</span></div>
+                      <h3 className="text-2xl font-bold mb-2">Enterprise Platform</h3>
                       <p className="text-muted-foreground">Scale-ups</p>
                       <p className="text-sm text-muted-foreground">50+ developers</p>
                     </div>
@@ -215,15 +307,15 @@ export default function Home() {
                       <ul className="space-y-3 text-sm">
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Everything in Growth</span>
+                          <span>Everything in SaaS</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Multi-region deployments</span>
+                          <span>Multi-platform ecosystem</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Advanced security hardening</span>
+                          <span>Advanced AI automation</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
@@ -270,14 +362,12 @@ export default function Home() {
             {/* CTA Section */}
             <div className="text-center mb-16">
               <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Start Your Transformation</h3>
+                <h3 className="text-2xl font-bold mb-4">Start Your Development Journey</h3>
                 <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Begin with our comprehensive 15-day Technical Infrastructure Audit to identify opportunities and create your transformation roadmap.
+                  Begin with our comprehensive technical consultation to identify opportunities and create your development roadmap.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <div className="text-xl font-bold text-primary">$15K-25K CAD</div>
-                  <div className="text-muted-foreground">•</div>
-                  <div className="text-muted-foreground">Full audit with ROI analysis</div>
+                  <div className="text-muted-foreground">Free consultation with project roadmap</div>
                 </div>
               </div>
             </div>
@@ -290,10 +380,10 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
                 <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                  Get Your Infrastructure Audit
+                  Start Your Project
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
-                  Ready to transform your infrastructure? Contact us to schedule your comprehensive audit.
+                  Ready to build your next big thing? Contact us to discuss your project and get a free consultation.
                 </p>
               </div>
               <ContactForm />

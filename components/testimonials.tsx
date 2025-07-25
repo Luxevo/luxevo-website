@@ -5,23 +5,23 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Their infrastructure audit saved us $180K annually in cloud costs and reduced our deployment time from 4 hours to 15 minutes. The ROI was immediate and transformational.",
+        "They built our entire SaaS platform from scratch in 8 weeks. The user experience is incredible, and our customer onboarding is now 90% automated. Game changer for our business.",
       name: "Sarah Chen",
       title: "CTO, FinTech Startup",
       avatar: "SC",
     },
     {
       quote:
-        "The team's expertise in healthcare compliance was crucial for our Series A. They implemented HIPAA-compliant infrastructure that passed all investor security audits.",
+        "The team delivered our mobile app and backend infrastructure on time and under budget. Their healthcare compliance expertise was crucial for our Series A funding.",
       name: "Michael Dubois",
       title: "VP Engineering, HealthTech Scale-up",
       avatar: "MD",
     },
     {
       quote:
-        "From constant production fires to 99.9% uptime in 60 days. Their monitoring and alerting setup transformed our operations and eliminated weekend emergencies.",
+        "From concept to launch in 6 weeks. Their automation systems reduced our operational costs by 60% and improved customer satisfaction by 40%. Outstanding results.",
       name: "David Rodriguez",
-      title: "Head of DevOps, FoodTech Company",
+      title: "Head of Product, E-commerce Platform",
       avatar: "DR",
     },
   ]
@@ -38,7 +38,7 @@ export default function Testimonials() {
               Trusted by Quebec Startups
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              See what our clients say about their infrastructure transformation results.
+              See what our clients say about their development and automation results.
             </p>
           </div>
         </div>

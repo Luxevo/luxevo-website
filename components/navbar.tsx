@@ -14,6 +14,7 @@ export default function Navbar() {
   const navItems = [
     { label: "Features", href: "#features" },
     { label: "Use Cases", href: "#use-cases" },
+    { label: "Partners", href: "#partners" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ]
@@ -51,8 +52,8 @@ export default function Navbar() {
             <Link href="#contact">
               <Zap className="h-4 w-4 text-white" />
               <div className="flex flex-col items-start">
-                <span className="text-sm font-medium">Get Audit</span>
-                <span className="text-xs text-blue-100 -mt-0.5">15-day assessment</span>
+                <span className="text-sm font-medium">Start Project</span>
+                <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
               </div>
             </Link>
           </Button>
@@ -85,8 +86,8 @@ export default function Navbar() {
                     <Link href="#contact" onClick={() => setIsOpen(false)}>
                       <Zap className="h-4 w-4 text-white" />
                       <div className="flex flex-col items-start">
-                        <span className="text-sm font-medium">Get Audit</span>
-                        <span className="text-xs text-blue-100 -mt-0.5">15-day assessment</span>
+                        <span className="text-sm font-medium">Start Project</span>
+                        <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
                       </div>
                     </Link>
                   </Button>

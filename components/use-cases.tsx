@@ -18,41 +18,41 @@ export default function UseCases() {
       icon: <BuildingIcon />,
       title: "FinTech Startups",
       description:
-        "Specialized solutions for financial technology companies including PCI-DSS compliance, fraud prevention, and secure payment processing infrastructure.",
+        "Complete financial platforms with secure payment processing, compliance automation, fraud detection, and mobile banking solutions.",
       accentColor: "rgba(59, 130, 246, 0.5)",
     },
     {
       icon: <GovernmentIcon />,
       title: "HealthTech Companies",
       description:
-        "HIPAA/PIPEDA compliant infrastructure, patient data protection, medical device integration, and FDA/Health Canada validation support.",
+        "HIPAA/PIPEDA compliant platforms, patient portals, telemedicine apps, medical device integration, and health data analytics.",
       accentColor: "rgba(139, 92, 246, 0.5)",
     },
     {
       icon: <FinanceIcon />,
-      title: "Series A/B Startups",
+      title: "SaaS Companies",
       description:
-        "Infrastructure scaling for rapid growth, investor-ready security posture, and compliance frameworks for funding requirements.",
+        "Scalable SaaS platforms with user management, billing systems, analytics dashboards, and automated customer onboarding.",
       accentColor: "rgba(245, 158, 11, 0.5)",
     },
     {
       icon: <HealthcareIcon />,
-      title: "FoodTech Innovation",
+      title: "E-commerce & Retail",
       description:
-        "HACCP compliance, ISO 22000 certification support, food traceability systems, and supply chain monitoring solutions.",
+        "Modern e-commerce platforms, inventory management systems, customer analytics, and automated order processing solutions.",
       accentColor: "rgba(239, 68, 68, 0.5)",
     },
     {
       icon: <LegalIcon />,
-      title: "Scale-up Companies",
+      title: "Enterprise Solutions",
       description:
-        "Enterprise-grade infrastructure transformation for companies with 50+ developers, advanced DevOps, and multi-region deployments.",
+        "Custom enterprise platforms, workflow automation, integration systems, and AI-powered business intelligence solutions.",
       accentColor: "rgba(132, 204, 22, 0.5)",
     },
     {
       icon: <EducationIcon />,
       title: "Quebec Tech Ecosystem",
-      description: "Local expertise for Quebec-based startups with understanding of regional compliance and business requirements.",
+      description: "Local expertise for Quebec-based startups with understanding of regional compliance, funding, and business requirements.",
       accentColor: "rgba(14, 165, 233, 0.5)",
     },
   ]
@@ -77,7 +77,7 @@ export default function UseCases() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   }

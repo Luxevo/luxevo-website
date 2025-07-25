@@ -7,31 +7,31 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Luxévo Inc. | Technical Infrastructure for Quebec Startups",
+  title: "Luxévo Inc. | Full-Stack Development & Technical Solutions for Quebec Startups",
   description:
-    "Reduce cloud costs by 40-70%, accelerate deployments by 10x, and achieve 99.9% uptime. Specialized infrastructure consulting for Quebec FinTech, HealthTech, and FoodTech startups.",
-  keywords: "technical infrastructure, DevOps consulting, cloud optimization, Quebec startups, FinTech infrastructure, HealthTech compliance, CI/CD automation",
+    "Complete web development, SaaS platforms, mobile apps, automation, and infrastructure solutions. From concept to scale for Quebec FinTech, HealthTech, and FoodTech startups.",
+  keywords: "web development, SaaS development, mobile apps, automation, technical infrastructure, DevOps consulting, Quebec startups, FinTech, HealthTech, full-stack development",
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://your-domain.com",
-    title: "Luxévo Inc. | Infrastructure Transformation for Startups",
+    title: "Luxévo Inc. | Complete Technical Solutions for Startups",
     description:
-      "Proven 15-day audit and transformation process for Quebec startups. 5x ROI guarantee with 40-70% cost reduction and 10x deployment acceleration.",
+      "End-to-end development services: web apps, SaaS platforms, mobile apps, automation, and infrastructure. Transform your startup with our comprehensive technical expertise.",
     siteName: "Luxévo Inc.",
     images: [
       {
         url: "https://your-domain.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luxévo Inc. - Technical Infrastructure Services",
+        alt: "Luxévo Inc. - Complete Technical Development Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxévo Inc. | Infrastructure Transformation for Startups",
-    description: "Reduce cloud costs by 40-70% and accelerate deployments by 10x with our proven transformation process.",
+    title: "Luxévo Inc. | Complete Technical Solutions for Startups",
+    description: "Web development, SaaS platforms, mobile apps, automation, and infrastructure - everything your startup needs to scale.",
     images: ["https://your-domain.com/twitter-image.jpg"],
   },
   robots: {

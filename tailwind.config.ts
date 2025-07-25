@@ -26,21 +26,21 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#5361ff",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
-          DEFAULT: "#fe7d53",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         brand: {
-          cream: "#f6ede4",
-          blue: "#5361ff",
-          orange: "#fe7d53",
+          cream: "hsl(30 30% 95%)",
+          blue: "hsl(var(--primary))",
+          orange: "hsl(var(--accent))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

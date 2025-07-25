@@ -69,8 +69,7 @@ export default function TypingPromptInput() {
         <div className="relative">
           <Input
             className="pr-20 py-6 text-base rounded-xl backdrop-blur-md border-2 focus-visible:ring-0 focus-visible:ring-offset-0 
-            dark:bg-background/20 dark:border-white/5 dark:text-white
-            bg-white/80 border-primary/10 text-gray-800 shadow-[0_4px_20px_rgba(36,101,237,0.2)]"
+            bg-white/80 dark:bg-background/20 border-primary/10 dark:border-white/10 text-foreground shadow-[0_4px_20px_hsl(var(--primary)/0.2)] dark:shadow-[0_4px_20px_hsl(var(--primary)/0.3)]"
             placeholder=""
             value={displayText}
             readOnly

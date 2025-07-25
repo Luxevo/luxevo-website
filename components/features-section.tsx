@@ -14,51 +14,51 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: <BotIcon />,
-      title: "Infrastructure Audit",
+      title: "Web Development",
       description:
-        "Comprehensive 15-day assessment of 150+ critical infrastructure points with detailed technical report and ROI calculations.",
+        "Modern, responsive web applications built with React, Next.js, and cutting-edge technologies for optimal performance and user experience.",
       accentColor: "rgba(36, 101, 237, 0.5)",
     },
     {
       icon: <SparklesIcon />,
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by 40-70% through intelligent resource management and architecture optimization.",
+      title: "SaaS Platforms",
+      description: "Complete SaaS solutions with user management, billing, analytics, and scalable architecture for rapid growth.",
       accentColor: "rgba(236, 72, 153, 0.5)",
     },
     {
       icon: <DatabaseIcon />,
-      title: "CI/CD Automation",
-      description: "Transform manual deployments from 4+ hours to 15 minutes with automated pipelines and testing.",
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications for iOS and Android with seamless backend integration.",
       accentColor: "rgba(34, 211, 238, 0.5)",
     },
     {
       icon: <ShieldIcon />,
-      title: "Security Hardening",
-      description: "Implement enterprise-grade security measures and compliance frameworks for your industry.",
+      title: "Automation Systems",
+      description: "Intelligent automation solutions that streamline operations, reduce costs, and improve efficiency by 80%.",
       accentColor: "rgba(132, 204, 22, 0.5)",
     },
     {
       icon: <FileTextIcon />,
-      title: "Infrastructure as Code",
-      description: "Implement scalable, version-controlled infrastructure with automated provisioning and management.",
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud architecture with AWS, Azure, or GCP, optimized for performance and cost efficiency.",
       accentColor: "rgba(249, 115, 22, 0.5)",
     },
     {
       icon: <ServerIcon />,
-      title: "Monitoring & Alerting",
-      description: "Set up comprehensive monitoring systems to achieve 99.9% uptime and reduce incidents by 80%.",
+      title: "DevOps & CI/CD",
+      description: "Automated deployment pipelines, monitoring, and infrastructure management for 99.9% uptime.",
       accentColor: "rgba(168, 85, 247, 0.5)",
     },
     {
       icon: <LockIcon />,
-      title: "Compliance Readiness",
-      description: "Ensure PCI-DSS, HIPAA, SOC 2, and industry-specific compliance for funding and growth.",
+      title: "Security & Compliance",
+      description: "Enterprise-grade security measures and compliance frameworks (PCI-DSS, HIPAA, SOC 2) for your industry.",
       accentColor: "rgba(251, 191, 36, 0.5)",
     },
     {
       icon: <ZapIcon />,
-      title: "Team Training",
-      description: "Comprehensive knowledge transfer and hands-on training to ensure your team's autonomy and success.",
+      title: "AI Integration",
+      description: "Intelligent features, chatbots, and AI-powered automation to enhance user experience and operational efficiency.",
       accentColor: "rgba(16, 185, 129, 0.5)",
     },
   ]
@@ -72,10 +72,10 @@ export default function FeaturesSection() {
               Key Features
             </div>
             <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Technical Infrastructure Services
+              Complete Technical Services
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Proven solutions for Quebec startups and scale-ups to optimize, secure, and scale their technical infrastructure.
+              End-to-end development solutions for Quebec startups and scale-ups to build, scale, and automate their technology.
             </p>
           </div>
         </div>
