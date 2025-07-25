@@ -60,8 +60,8 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
             <Link href="#contact">
               <Zap className="h-4 w-4 text-white" />
               <div className="flex flex-col items-start">
-                <span className="text-sm font-medium">Start Project</span>
-                <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
+                <span className="text-sm font-medium">{t.common.startProject}</span>
+                <span className="text-xs text-blue-100 -mt-0.5">{t.common.freeConsultation}</span>
               </div>
             </Link>
           </Button>
@@ -94,8 +94,8 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
                     <Link href="#contact" onClick={() => setIsOpen(false)}>
                       <Zap className="h-4 w-4 text-white" />
                       <div className="flex flex-col items-start">
-                        <span className="text-sm font-medium">Start Project</span>
-                        <span className="text-xs text-blue-100 -mt-0.5">Free consultation</span>
+                        <span className="text-sm font-medium">{t.common.startProject}</span>
+                        <span className="text-xs text-blue-100 -mt-0.5">{t.common.freeConsultation}</span>
                       </div>
                     </Link>
                   </Button>

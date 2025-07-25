@@ -10,8 +10,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, AlertCircle } from 'lucide-react'
+import { useTranslations, type Locale } from "@/lib/i18n"
 
-export default function ContactForm() {
+interface ContactFormProps {
+  locale?: Locale
+}
+
+export default function ContactForm({ locale = 'en' }: ContactFormProps) {
+  const t = useTranslations(locale)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -63,9 +69,9 @@ export default function ContactForm() {
       <Card>
         <CardContent className="pt-6 flex flex-col items-center justify-center min-h-[400px] text-center">
           <CheckCircle2 className="h-16 w-16 text-primary mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+          <h3 className="text-2xl font-bold mb-2">{t.common.thankYou}</h3>
           <p className="text-muted-foreground mb-6">
-            Your consultation request has been received. Our technical team will contact you within 24 hours to discuss your project requirements and schedule your free consultation.
+            {t.common.consultationReceived}
           </p>
           <Button onClick={() => {
             setIsSubmitted(false)
@@ -79,7 +85,7 @@ export default function ContactForm() {
               size: '',
               message: ''
             })
-          }}>Submit Another Inquiry</Button>
+          }}>{t.common.submitAnotherInquiry}</Button>
         </CardContent>
       </Card>
     )
@@ -88,9 +94,9 @@ export default function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Start Your Project</CardTitle>
+        <CardTitle>{t.common.startYourProject}</CardTitle>
         <CardDescription>
-          Get a free consultation to discuss your project requirements and receive a detailed development roadmap.
+          {t.common.getFreeConsultation}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -103,7 +109,7 @@ export default function ContactForm() {
           )}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+              <Label htmlFor="firstName">{t.common.firstName}</Label>
               <Input 
                 id="firstName" 
                 placeholder="John" 
@@ -113,7 +119,7 @@ export default function ContactForm() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
+              <Label htmlFor="lastName">{t.common.lastName}</Label>
               <Input 
                 id="lastName" 
                 placeholder="Doe" 
@@ -124,7 +130,7 @@ export default function ContactForm() {
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Work Email</Label>
+            <Label htmlFor="email">{t.common.workEmail}</Label>
             <Input 
               id="email" 
               type="email" 
@@ -135,7 +141,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number (Optional)</Label>
+            <Label htmlFor="phone">{t.common.phoneNumber}</Label>
             <Input 
               id="phone" 
               type="tel" 
@@ -143,10 +149,10 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
             />
-            <p className="text-xs text-muted-foreground">For faster contact and consultation scheduling</p>
+            <p className="text-xs text-muted-foreground">{t.common.fasterContact}</p>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="company">Company/Organization</Label>
+            <Label htmlFor="company">{t.common.company}</Label>
             <Input 
               id="company" 
               placeholder="Acme Inc." 
@@ -156,7 +162,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="role">Your Role</Label>
+            <Label htmlFor="role">{t.common.yourRole}</Label>
             <Input 
               id="role" 
               placeholder="CTO, IT Director, etc." 
@@ -166,35 +172,35 @@ export default function ContactForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="size">Organization Size</Label>
+            <Label htmlFor="size">{t.common.organizationSize}</Label>
             <Select value={formData.size} onValueChange={(value) => handleInputChange('size', value)}>
               <SelectTrigger id="size">
-                <SelectValue placeholder="Select organization size" />
+                <SelectValue placeholder={t.common.selectOrgSize} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1-10">1-10 developers</SelectItem>
-                <SelectItem value="10-50">10-50 developers</SelectItem>
-                <SelectItem value="50+">50+ developers</SelectItem>
-                <SelectItem value="series-a">Series A/B stage</SelectItem>
-                <SelectItem value="pre-series">Pre-Series A</SelectItem>
+                <SelectItem value="1-10">{t.common.oneToTen}</SelectItem>
+                <SelectItem value="10-50">{t.common.tenToFifty}</SelectItem>
+                <SelectItem value="50+">{t.common.fiftyPlus}</SelectItem>
+                <SelectItem value="series-a">{t.common.seriesAB}</SelectItem>
+                <SelectItem value="pre-series">{t.common.preSeriesA}</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">How can we help?</Label>
+            <Label htmlFor="message">{t.common.howCanWeHelp}</Label>
             <Textarea 
               id="message" 
-              placeholder="Tell us about your project idea, current challenges, tech requirements, and business goals..." 
+              placeholder={t.common.projectPlaceholder}
               rows={4}
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
             />
           </div>
           <Button type="submit" className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Request Free Consultation"}
+            {isSubmitting ? t.common.submitting : t.common.requestFreeConsultation}
           </Button>
           <p className="text-xs text-muted-foreground text-center">
-            By submitting this form, you agree to our privacy policy and terms of service.
+            {t.common.agreementText}
           </p>
         </form>
       </CardContent>

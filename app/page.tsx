@@ -152,7 +152,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">UPGR8</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      SaaS Platform
+                      {t.partners.tags.saasPlatform}
                     </span>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Gosholo</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      Mobile App
+                      {t.partners.tags.mobileApp}
                     </span>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Mordu Sport</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      Mobile App
+                      {t.partners.tags.mobileApp}
                     </span>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Webnique</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      Web Agency
+                      {t.partners.tags.webAgency}
                     </span>
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">WELPCO</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      SaaS Platform
+                      {t.partners.tags.saasPlatform}
                     </span>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">UPGR8</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      SaaS Platform
+                      {t.partners.tags.saasPlatform}
                     </span>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Gosholo</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      Mobile App
+                      {t.partners.tags.mobileApp}
                     </span>
                   </div>
                 </div>
@@ -286,7 +286,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Mordu Sport</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      Mobile App
+                      {t.partners.tags.mobileApp}
                     </span>
                   </div>
                 </div>
@@ -305,7 +305,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">Webnique</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      Web Agency
+                      {t.partners.tags.webAgency}
                     </span>
                   </div>
                 </div>
@@ -324,7 +324,7 @@ export default function Home() {
                     </div>
                     <p className="text-base font-semibold text-center">WELPCO</p>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      SaaS Platform
+                      {t.partners.tags.saasPlatform}
                     </span>
                   </div>
                 </div>
@@ -335,19 +335,19 @@ export default function Home() {
             <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
                 <div className="text-3xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+                <div className="text-sm text-muted-foreground">{t.common.projectsDelivered}</div>
               </div>
               <div className="space-y-2">
                 <div className="text-3xl font-bold text-primary">95%</div>
-                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                <div className="text-sm text-muted-foreground">{t.common.clientSatisfaction}</div>
               </div>
               <div className="space-y-2">
                 <div className="text-3xl font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">Years Partnership</div>
+                <div className="text-sm text-muted-foreground">{t.common.yearsPartnership}</div>
               </div>
               <div className="space-y-2">
                 <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Support Available</div>
+                <div className="text-sm text-muted-foreground">{t.common.supportAvailable}</div>
               </div>
             </div>
           </div>
@@ -380,28 +380,18 @@ export default function Home() {
                 <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">MVP Development</h3>
-                      <p className="text-muted-foreground">Early-stage startups</p>
-                      <p className="text-sm text-muted-foreground">≤10 developers</p>
+                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.mvpDevelopment.title}</h3>
+                      <p className="text-muted-foreground">{t.packagesContent.mvpDevelopment.description}</p>
+                      <p className="text-sm text-muted-foreground">{t.packagesContent.mvpDevelopment.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Web app or mobile MVP</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Basic automation setup</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Cloud infrastructure</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Security & compliance</span>
-                        </li>
+                        {t.packagesContent.mvpDevelopment.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -413,36 +403,22 @@ export default function Home() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-accent/30 to-primary/30 rounded-2xl blur opacity-100 transition duration-1000"></div>
                 <div className="relative bg-background border-2 border-accent rounded-2xl p-8 h-full shadow-xl">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-accent text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular</span>
+                    <span className="bg-accent text-white px-4 py-2 rounded-full text-sm font-medium">{t.common.mostPopular}</span>
                   </div>
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6 pt-4">
-                      <h3 className="text-2xl font-bold mb-2">SaaS Platform</h3>
-                      <p className="text-muted-foreground">Growing startups</p>
-                      <p className="text-sm text-muted-foreground">10-50 developers</p>
+                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.saasPlatform.title}</h3>
+                      <p className="text-muted-foreground">{t.packagesContent.saasPlatform.description}</p>
+                      <p className="text-sm text-muted-foreground">{t.packagesContent.saasPlatform.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Everything in MVP</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Full SaaS platform</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Advanced automation</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Mobile app companion</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Analytics & monitoring</span>
-                        </li>
+                        {t.packagesContent.saasPlatform.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -455,32 +431,18 @@ export default function Home() {
                 <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
                   <div className="flex flex-col h-full">
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">Enterprise Platform</h3>
-                      <p className="text-muted-foreground">Scale-ups</p>
-                      <p className="text-sm text-muted-foreground">50+ developers</p>
+                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.enterprisePlatform.title}</h3>
+                      <p className="text-muted-foreground">{t.packagesContent.enterprisePlatform.description}</p>
+                      <p className="text-sm text-muted-foreground">{t.packagesContent.enterprisePlatform.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Everything in SaaS</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Multi-platform ecosystem</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Advanced AI automation</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>24/7 monitoring & support</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Custom integrations</span>
-                        </li>
+                        {t.packagesContent.enterprisePlatform.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -490,27 +452,27 @@ export default function Home() {
 
             {/* Guarantees and Benefits */}
             <div className="bg-muted/30 dark:bg-muted/10 rounded-2xl p-8 mb-16">
-              <h3 className="text-2xl font-bold text-center mb-8">Our Guarantees & Benefits</h3>
+              <h3 className="text-2xl font-bold text-center mb-8">{t.common.guaranteesBenefits}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col items-center text-center">
                   <Users className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">5x ROI Guarantee</h4>
-                  <p className="text-sm text-muted-foreground">Or full refund</p>
+                  <h4 className="font-semibold mb-2">{t.common.roiGuarantee}</h4>
+                  <p className="text-sm text-muted-foreground">{t.common.fullRefund}</p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Database className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">40-70% Cost Reduction</h4>
-                  <p className="text-sm text-muted-foreground">Typical cloud savings</p>
+                  <h4 className="font-semibold mb-2">{t.common.costReduction}</h4>
+                  <p className="text-sm text-muted-foreground">{t.common.typicalCloudSavings}</p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Bot className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">10-15x Faster</h4>
-                  <p className="text-sm text-muted-foreground">Deployment speeds</p>
+                  <h4 className="font-semibold mb-2">{t.common.fasterDeployment}</h4>
+                  <p className="text-sm text-muted-foreground">{t.common.deploymentSpeeds}</p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Shield className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">99.9% Uptime</h4>
-                  <p className="text-sm text-muted-foreground">Achievement target</p>
+                  <h4 className="font-semibold mb-2">{t.common.uptime}</h4>
+                  <p className="text-sm text-muted-foreground">{t.common.achievementTarget}</p>
                 </div>
               </div>
             </div>
@@ -518,12 +480,12 @@ export default function Home() {
             {/* CTA Section */}
             <div className="text-center mb-16">
               <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Start Your Development Journey</h3>
+                <h3 className="text-2xl font-bold mb-4">{t.common.startDevelopmentJourney}</h3>
                 <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Begin with our comprehensive technical consultation to identify opportunities and create your development roadmap.
+                  {t.common.comprehensiveTechnicalConsultation}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <div className="text-muted-foreground">Free consultation with project roadmap</div>
+                  <div className="text-muted-foreground">{t.common.freeConsultationRoadmap}</div>
                 </div>
               </div>
             </div>
@@ -542,12 +504,12 @@ export default function Home() {
                   {t.contact.subtitle}
                 </p>
               </div>
-              <ContactForm />
+              <ContactForm locale={locale} />
             </div>
           </div>
         </section>
 
-        <Footer />
+        <Footer locale={locale} />
       </div>
     </>
   )

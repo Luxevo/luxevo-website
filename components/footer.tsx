@@ -1,6 +1,12 @@
 import Link from "next/link"
+import { useTranslations, type Locale } from "@/lib/i18n"
 
-export default function Footer() {
+interface FooterProps {
+  locale?: Locale
+}
+
+export default function Footer({ locale = 'en' }: FooterProps) {
+  const t = useTranslations(locale)
   const currentYear = new Date().getFullYear()
 
   return (
@@ -8,87 +14,87 @@ export default function Footer() {
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Luxévo Inc.</h3>
+            <h3 className="text-lg font-bold">{t.footer.company}</h3>
             <p className="text-sm text-muted-foreground">
-              Technical infrastructure consulting for Quebec startups and scale-ups. Reduce costs, accelerate deployments, and achieve enterprise-grade reliability.
+              {t.footer.description}
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">Services</h3>
+            <h3 className="text-sm font-bold">{t.footer.services}</h3>
             <nav aria-label="Services Navigation">
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                    Infrastructure Audit
+                    {t.footer.links.infrastructureAudit}
                   </Link>
                 </li>
                 <li>
                   <Link href="#how-it-works" className="text-muted-foreground hover:text-foreground">
-                    Transformation Process
+                    {t.footer.links.transformationProcess}
                   </Link>
                 </li>
                 <li>
                   <Link href="#use-cases" className="text-muted-foreground hover:text-foreground">
-                    Industry Solutions
+                    {t.footer.links.industrySolutions}
                   </Link>
                 </li>
                 <li>
                   <Link href="#contact" className="text-muted-foreground hover:text-foreground">
-                    Packages & Pricing
+                    {t.footer.links.packagesAndPricing}
                   </Link>
                 </li>
               </ul>
             </nav>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">Resources</h3>
+            <h3 className="text-sm font-bold">{t.footer.resources}</h3>
             <nav aria-label="Resources Navigation">
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/documentation" className="text-muted-foreground hover:text-foreground">
-                    Documentation
+                    {t.footer.links.documentation}
                   </Link>
                 </li>
                 <li>
                   <Link href="/case-studies" className="text-muted-foreground hover:text-foreground">
-                    Case Studies
+                    {t.footer.links.caseStudies}
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog" className="text-muted-foreground hover:text-foreground">
-                    Blog
+                    {t.footer.links.blog}
                   </Link>
                 </li>
                 <li>
                   <Link href="/support" className="text-muted-foreground hover:text-foreground">
-                    Support
+                    {t.footer.links.support}
                   </Link>
                 </li>
               </ul>
             </nav>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">Company</h3>
+            <h3 className="text-sm font-bold">{t.footer.companySection}</h3>
             <nav aria-label="Company Navigation">
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/about" className="text-muted-foreground hover:text-foreground">
-                    About
+                    {t.footer.links.about}
                   </Link>
                 </li>
                 <li>
                   <Link href="/careers" className="text-muted-foreground hover:text-foreground">
-                    Careers
+                    {t.footer.links.careers}
                   </Link>
                 </li>
                 <li>
                   <Link href="/contact" className="text-muted-foreground hover:text-foreground">
-                    Contact
+                    {t.footer.links.contact}
                   </Link>
                 </li>
                 <li>
                   <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
-                    Privacy Policy
+                    {t.footer.links.privacy}
                   </Link>
                 </li>
               </ul>
@@ -96,7 +102,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© {currentYear} Luxévo Inc. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">{t.footer.copyright.replace('2024', currentYear.toString())}</p>
           <div className="flex gap-4">
             <Link
               href="https://linkedin.com"
