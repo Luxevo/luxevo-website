@@ -23,15 +23,9 @@ export default function UseCases({ locale }: UseCasesProps) {
   const useCases = [
     {
       icon: <BuildingIcon />,
-      title: t.specializations.items.fintech.title,
-      description: t.specializations.items.fintech.description,
+      title: t.specializations.items.startup.title,
+      description: t.specializations.items.startup.description,
       accentColor: "rgba(59, 130, 246, 0.5)",
-    },
-    {
-      icon: <GovernmentIcon />,
-      title: t.specializations.items.healthtech.title,
-      description: t.specializations.items.healthtech.description,
-      accentColor: "rgba(139, 92, 246, 0.5)",
     },
     {
       icon: <FinanceIcon />,
@@ -40,22 +34,10 @@ export default function UseCases({ locale }: UseCasesProps) {
       accentColor: "rgba(245, 158, 11, 0.5)",
     },
     {
-      icon: <HealthcareIcon />,
-      title: t.specializations.items.ecommerce.title,
-      description: t.specializations.items.ecommerce.description,
-      accentColor: "rgba(239, 68, 68, 0.5)",
-    },
-    {
       icon: <LegalIcon />,
       title: t.specializations.items.enterprise.title,
       description: t.specializations.items.enterprise.description,
       accentColor: "rgba(132, 204, 22, 0.5)",
-    },
-    {
-      icon: <EducationIcon />,
-      title: t.specializations.items.quebec.title,
-      description: t.specializations.items.quebec.description,
-      accentColor: "rgba(14, 165, 233, 0.5)",
     },
   ]
 

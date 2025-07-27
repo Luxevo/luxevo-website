@@ -42,18 +42,18 @@ export const fr = {
   // How It Works Section
   howItWorks: {
     title: 'Notre Processus de Développement Éprouvé',
-    subtitle: 'Du concept au lancement en 4-12 semaines avec itération rapide et livraison continue.',
+    subtitle: 'Du concept au lancement avec itération rapide et livraison continue.',
     steps: {
       discovery: {
-        title: 'Découverte & Planification (1-2 semaines)',
+        title: 'Découverte & Planification',
         description: 'Analyse des exigences, conception de l\'architecture technique et création du plan de projet avec spécifications détaillées et calendrier.',
       },
       development: {
-        title: 'Développement & Tests (3-10 semaines)',
+        title: 'Développement & Tests',
         description: 'Développement agile avec démos hebdomadaires, tests automatisés, pipelines CI/CD et intégration continue des retours.',
       },
       deployment: {
-        title: 'Lancement & Optimisation (1-2 semaines)',
+        title: 'Lancement & Optimisation',
         description: 'Déploiement en production, configuration de surveillance, optimisation des performances et maintenance continue avec mises à jour de fonctionnalités.',
       },
     },
@@ -61,32 +61,20 @@ export const fr = {
   // Specializations Section
   specializations: {
     badge: 'Spécialisations',
-    title: 'Solutions Spécialisées par Industrie',
-    subtitle: 'Solutions d\'infrastructure adaptées aux secteurs de startups leaders du Québec avec conformité et expertise spécifiques à l\'industrie.',
+    title: 'Solutions Sectorielles Ciblées',
+    subtitle: 'Expertise approfondie dans des secteurs spécifiques avec un historique éprouvé et des solutions adaptées à l\'industrie.',
     items: {
-      fintech: {
-        title: 'Startups FinTech',
-        description: 'Plateformes financières complètes avec traitement de paiement sécurisé, automatisation de conformité, détection de fraude et solutions bancaires mobiles.',
-      },
-      healthtech: {
-        title: 'Entreprises HealthTech',
-        description: 'Plateformes conformes HIPAA/PIPEDA, portails patients, applications de télémédecine, intégration d\'appareils médicaux et analyse de données de santé.',
+      startup: {
+        title: 'Startups',
+        description: 'Infrastructure technique complète pour les startups en phase initiale, du développement MVP aux plateformes évolutives avec itération rapide et architecture axée sur la croissance.',
       },
       saas: {
         title: 'Entreprises SaaS',
-        description: 'Plateformes SaaS évolutives avec gestion des utilisateurs, systèmes de facturation, tableaux de bord analytiques et intégration automatisée des clients.',
-      },
-      ecommerce: {
-        title: 'E-commerce & Commerce de Détail',
-        description: 'Plateformes e-commerce modernes, systèmes de gestion d\'inventaire, analyse client et solutions de traitement de commandes automatisées.',
+        description: 'Plateformes SaaS évolutives avec gestion des utilisateurs, systèmes de facturation, tableaux de bord analytiques et intégration automatisée des clients pour les entreprises basées sur l\'abonnement.',
       },
       enterprise: {
         title: 'Solutions Entreprise',
-        description: 'Plateformes d\'entreprise personnalisées, automatisation des workflows, systèmes d\'intégration et solutions d\'intelligence d\'affaires alimentées par l\'IA.',
-      },
-      quebec: {
-        title: 'Écosystème Tech du Québec',
-        description: 'Expertise locale pour les startups basées au Québec avec compréhension de la conformité régionale, du financement et des exigences commerciales.',
+        description: 'Plateformes d\'entreprise personnalisées, automatisation des workflows, systèmes d\'intégration et solutions d\'intelligence d\'affaires alimentées par l\'IA pour les organisations établies.',
       },
     },
   },

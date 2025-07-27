@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react"
 import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
 
 interface FrostedGlassIconProps {
   icon: ReactNode
@@ -16,14 +17,22 @@ export default function FrostedGlassIcon({
   size = "md",
   className = "",
 }: FrostedGlassIconProps) {
+  const [mounted, setMounted] = useState(false)
   const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
+  
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const sizeClasses = {
     sm: "w-10 h-10",
     md: "w-12 h-12",
     lg: "w-14 h-14",
   }
+
+  // Use default light theme styles until mounted to prevent hydration mismatch
+  const isDark = mounted && resolvedTheme === "dark"
 
   return (
     <div

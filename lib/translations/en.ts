@@ -61,32 +61,20 @@ export const en = {
   // Specializations Section
   specializations: {
     badge: 'Specializations',
-    title: 'Specialized Industry Solutions',
-    subtitle: 'Tailored infrastructure solutions for Quebec\'s leading startup sectors with industry-specific compliance and expertise.',
+    title: 'Focused Industry Solutions',
+    subtitle: 'Deep expertise in specific sectors with proven track record and industry-specific solutions.',
     items: {
-      fintech: {
-        title: 'FinTech Startups',
-        description: 'Complete financial platforms with secure payment processing, compliance automation, fraud detection, and mobile banking solutions.',
-      },
-      healthtech: {
-        title: 'HealthTech Companies',
-        description: 'HIPAA/PIPEDA compliant platforms, patient portals, telemedicine apps, medical device integration, and health data analytics.',
+      startup: {
+        title: 'Startups',
+        description: 'Complete technical infrastructure for early-stage startups, from MVP development to scalable platforms with rapid iteration and growth-focused architecture.',
       },
       saas: {
         title: 'SaaS Companies',
-        description: 'Scalable SaaS platforms with user management, billing systems, analytics dashboards, and automated customer onboarding.',
-      },
-      ecommerce: {
-        title: 'E-commerce & Retail',
-        description: 'Modern e-commerce platforms, inventory management systems, customer analytics, and automated order processing solutions.',
+        description: 'Scalable SaaS platforms with user management, billing systems, analytics dashboards, and automated customer onboarding for subscription-based businesses.',
       },
       enterprise: {
         title: 'Enterprise Solutions',
-        description: 'Custom enterprise platforms, workflow automation, integration systems, and AI-powered business intelligence solutions.',
-      },
-      quebec: {
-        title: 'Quebec Tech Ecosystem',
-        description: 'Local expertise for Quebec-based startups with understanding of regional compliance, funding, and business requirements.',
+        description: 'Custom enterprise platforms, workflow automation, integration systems, and AI-powered business intelligence solutions for established organizations.',
       },
     },
   },

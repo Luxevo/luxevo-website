@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -9,6 +9,7 @@ import { Menu, Zap } from 'lucide-react'
 import { ThemeToggle } from "@/components/theme-toggle"
 import LanguageSwitcher from "@/components/language-switcher"
 import { useTranslations, type Locale } from "@/lib/i18n"
+import { useTheme } from "next-themes"
 
 interface NavbarProps {
   locale: Locale
@@ -17,7 +18,14 @@ interface NavbarProps {
 
 export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme } = useTheme()
   const t = useTranslations(locale)
+
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const navItems = [
     { label: t.nav.features, href: "#features" },
@@ -26,13 +34,16 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
     { label: t.nav.contact, href: "#contact" },
   ]
 
+  // Determine which logo to use based on theme, but only after mounting
+  const logoSrc = mounted && theme === 'dark' ? '/luxevo-white-logo.png' : '/clients-logo/luxevo.png'
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2" aria-label="Luxévo Inc. Homepage">
             <Image
-              src="/clients-logo/luxevo.png"
+              src={logoSrc}
               alt="Luxévo Inc. Logo"
               width={150}
               height={150}
