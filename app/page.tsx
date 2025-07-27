@@ -133,11 +133,13 @@ export default function Home() {
                 className="flex gap-8"
                 animate={{ x: [0, -1200] }}
                 transition={{ 
-                  duration: 15, 
+                  duration: 4, 
                   repeat: Infinity, 
                   ease: "linear" 
                 }}
               >
+                
+     
                 {/* UPGR8 */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -145,7 +147,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/upgr8.png" 
+                        src="/clients-logo/upgr8-logo.png" 
                         alt="UPGR8 Logo" 
                         className="object-contain"
                       />
@@ -164,7 +166,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/gosholo.png" 
+                        src="/clients-logo/gosholo-logo.png" 
                         alt="Gosholo Logo" 
                         className="object-contain"
                       />
@@ -175,7 +177,24 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-
+           {/* Desjardins */}
+           <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/desjardins-logo.png" 
+                        alt="Desjardins Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Desjardins</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {t.partners.tags.saasPlatform}
+                    </span>
+                  </div>
+                </div>
                 {/* Mordu Sport */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -183,7 +202,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/morduSport.png" 
+                        src="/clients-logo/mordu-sport-logo.png" 
                         alt="Mordu Sport Logo" 
                         className="object-contain"
                       />
@@ -202,7 +221,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/webnique.png" 
+                        src="/clients-logo/webnique-logo.png" 
                         alt="Webnique Logo" 
                         className="object-contain"
                       />
@@ -213,7 +232,24 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-
+                {/* Radio Canada */}
+                <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/radio-canada-logo.png" 
+                        alt="Radio Canada Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Radio Canada</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {t.partners.tags.saasPlatform}
+                    </span>
+                  </div>
+                </div>
                 {/* WELPCO */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -221,7 +257,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/welpco.png" 
+                        src="/clients-logo/welpco-logo.png" 
                         alt="WELPCO Logo" 
                         className="object-contain"
                       />
@@ -234,6 +270,8 @@ export default function Home() {
                 </div>
 
                 {/* Duplicate items for seamless loop */}
+                
+        
                 {/* UPGR8 */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -241,7 +279,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/upgr8.png" 
+                        src="/clients-logo/upgr8-logo.png" 
                         alt="UPGR8 Logo" 
                         className="object-contain"
                       />
@@ -260,7 +298,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/gosholo.png" 
+                        src="/clients-logo/gosholo-logo.png" 
                         alt="Gosholo Logo" 
                         className="object-contain"
                       />
@@ -271,7 +309,24 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-
+           {/* Desjardins */}
+           <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/desjardins-logo.png" 
+                        alt="Desjardins Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Desjardins</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {t.partners.tags.saasPlatform}
+                    </span>
+                  </div>
+                </div>
                 {/* Mordu Sport */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -279,7 +334,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/morduSport.png" 
+                        src="/clients-logo/mordu-sport-logo.png" 
                         alt="Mordu Sport Logo" 
                         className="object-contain"
                       />
@@ -292,13 +347,13 @@ export default function Home() {
                 </div>
 
                 {/* Webnique */}
-                <div className="flex-shrink-0 w-64">
+              <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
                     <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/webnique.png" 
+                        src="/clients-logo/webnique-logo.png" 
                         alt="Webnique Logo" 
                         className="object-contain"
                       />
@@ -309,7 +364,24 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-
+             {/* Radio Canada */}
+             <div className="flex-shrink-0 w-64">
+                  <div className="flex flex-col items-center space-y-4 group">
+                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
+                      <Image 
+                        width={150}
+                        height={150}
+                        src="/clients-logo/radio-canada-logo.png" 
+                        alt="Radio Canada Logo" 
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-base font-semibold text-center">Radio Canada</p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {t.partners.tags.saasPlatform}
+                    </span>
+                  </div>
+                </div>
                 {/* WELPCO */}
                 <div className="flex-shrink-0 w-64">
                   <div className="flex flex-col items-center space-y-4 group">
@@ -317,7 +389,7 @@ export default function Home() {
                       <Image 
                         width={150}
                         height={150}
-                        src="/clients-logo/welpco.png" 
+                        src="/clients-logo/welpco-logo.png" 
                         alt="WELPCO Logo" 
                         className="object-contain"
                       />
@@ -328,6 +400,7 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
+
               </motion.div>
             </div>
 
@@ -382,7 +455,6 @@ export default function Home() {
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold mb-2">{t.packagesContent.mvpDevelopment.title}</h3>
                       <p className="text-muted-foreground">{t.packagesContent.mvpDevelopment.description}</p>
-                      <p className="text-sm text-muted-foreground">{t.packagesContent.mvpDevelopment.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
@@ -409,7 +481,6 @@ export default function Home() {
                     <div className="text-center mb-6 pt-4">
                       <h3 className="text-2xl font-bold mb-2">{t.packagesContent.saasPlatform.title}</h3>
                       <p className="text-muted-foreground">{t.packagesContent.saasPlatform.description}</p>
-                      <p className="text-sm text-muted-foreground">{t.packagesContent.saasPlatform.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
@@ -433,7 +504,6 @@ export default function Home() {
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold mb-2">{t.packagesContent.enterprisePlatform.title}</h3>
                       <p className="text-muted-foreground">{t.packagesContent.enterprisePlatform.description}</p>
-                      <p className="text-sm text-muted-foreground">{t.packagesContent.enterprisePlatform.subtitle}</p>
                     </div>
                     <div className="flex-1">
                       <ul className="space-y-3 text-sm">
@@ -456,8 +526,8 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col items-center text-center">
                   <Users className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">{t.common.roiGuarantee}</h4>
-                  <p className="text-sm text-muted-foreground">{t.common.fullRefund}</p>
+                  <h4 className="font-semibold mb-2">{t.common.provenResults}</h4>
+                  <p className="text-sm text-muted-foreground">{t.common.successfulDeliveries}</p>
                 </div>
                 <div className="flex flex-col items-center text-center">
                   <Database className="h-8 w-8 text-primary mb-3" />
@@ -477,18 +547,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center mb-16">
-              <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">{t.common.startDevelopmentJourney}</h3>
-                <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  {t.common.comprehensiveTechnicalConsultation}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <div className="text-muted-foreground">{t.common.freeConsultationRoadmap}</div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </section>
 

@@ -9,7 +9,7 @@ export const fr = {
   // Hero Section
   hero: {
     badge: 'Développement Full-Stack & Solutions Techniques',
-    title: 'Construisez, Évoluez et Automatisez la Technologie de Votre Startup',
+    title: 'Construisez, Améliorez et Automatisez la Technologie de Votre Startup',
     subtitle: 'Des applications web aux plateformes mobiles, des solutions SaaS aux systèmes d\'automatisation - nous gérons votre parcours technique complet avec des résultats prouvés et une livraison rapide.',
     startProject: 'Démarrer Votre Projet',
     freeConsultation: 'Consultation gratuite',
@@ -234,14 +234,14 @@ export const fr = {
     mostPopular: 'Plus Populaire',
     everythingInMvp: 'Tout ce qui est inclus dans MVP',
     everythingInSaas: 'Tout ce qui est inclus dans SaaS',
-    guaranteesBenefits: 'Nos Garanties et Avantages',
-    roiGuarantee: 'Garantie ROI 5x',
-    fullRefund: 'Ou remboursement complet',
-    costReduction: 'Réduction de Coûts 40-70%',
-    typicalCloudSavings: 'Économies cloud typiques',
-    fasterDeployment: '10-15x Plus Rapide',
-    deploymentSpeeds: 'Vitesses de déploiement',
-    uptime: 'Disponibilité 99.9%',
+    guaranteesBenefits: 'Nos Avantages & Valeur',
+    provenResults: 'Résultats Éprouvés',
+    successfulDeliveries: 'Livraisons de projets réussies',
+    costReduction: 'Réduction de Coûts 20-30%',
+    typicalCloudSavings: 'Économies d\'infrastructure typiques',
+    fasterDeployment: 'Déploiement Rapide',
+    deploymentSpeeds: 'Semaines au lieu de mois',
+    uptime: '99.9% Disponibilité',
     achievementTarget: 'Objectif d\'atteinte',
     startDevelopmentJourney: 'Commencez Votre Parcours de Développement',
     freeConsultationRoadmap: 'Consultation gratuite avec feuille de route du projet',
@@ -251,7 +251,7 @@ export const fr = {
     consultationReceived: 'Votre demande de consultation a été reçue. Notre équipe technique vous contactera dans les 24 heures pour discuter des exigences de votre projet et planifier votre consultation gratuite.',
     submitAnotherInquiry: 'Soumettre Une Autre Demande',
     getFreeConsultation: 'Obtenez une consultation gratuite pour discuter des exigences de votre projet et recevoir une feuille de route de développement détaillée.',
-    requestFreeConsultation: 'Demander Une Consultation Gratuite',
+    requestFreeConsultation: 'Nous Contacter',
     submitting: 'Envoi...',
     agreementText: 'En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions de service.',
     firstName: 'Prénom',
@@ -311,7 +311,6 @@ export const fr = {
     mvpDevelopment: {
       title: 'Développement MVP',
       description: 'Startups en phase initiale',
-      subtitle: '≤10 développeurs',
       features: [
         'Application web ou MVP mobile',
         'Configuration d\'automatisation de base',
@@ -322,7 +321,6 @@ export const fr = {
     saasPlatform: {
       title: 'Plateforme SaaS',
       description: 'Startups en croissance',
-      subtitle: '10-50 développeurs',
       features: [
         'Tout ce qui est inclus dans MVP',
         'Plateforme SaaS complète',
@@ -334,7 +332,6 @@ export const fr = {
     enterprisePlatform: {
       title: 'Plateforme Entreprise',
       description: 'Scale-ups',
-      subtitle: '50+ développeurs',
       features: [
         'Tout ce qui est inclus dans SaaS',
         'Écosystème multi-plateforme',

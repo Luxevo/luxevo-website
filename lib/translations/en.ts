@@ -42,18 +42,18 @@ export const en = {
   // How It Works Section
   howItWorks: {
     title: 'Our Proven Development Process',
-    subtitle: 'From concept to launch in 4-12 weeks with rapid iteration and continuous delivery.',
+    subtitle: 'From concept to launch with rapid iteration and continuous delivery.',
     steps: {
       discovery: {
-        title: 'Discovery & Planning (1-2 weeks)',
+        title: 'Discovery & Planning',
         description: 'Requirements analysis, technical architecture design, and project roadmap creation with detailed specifications and timeline.',
       },
       development: {
-        title: 'Development & Testing (3-10 weeks)',
+        title: 'Development & Testing',
         description: 'Agile development with weekly demos, automated testing, CI/CD pipelines, and continuous feedback integration.',
       },
       deployment: {
-        title: 'Launch & Optimization (1-2 weeks)',
+        title: 'Launch & Optimization',
         description: 'Production deployment, monitoring setup, performance optimization, and ongoing maintenance with feature updates.',
       },
     },
@@ -234,13 +234,13 @@ export const en = {
     mostPopular: 'Most Popular',
     everythingInMvp: 'Everything in MVP',
     everythingInSaas: 'Everything in SaaS',
-    guaranteesBenefits: 'Our Guarantees & Benefits',
-    roiGuarantee: '5x ROI Guarantee',
-    fullRefund: 'Or full refund',
-    costReduction: '40-70% Cost Reduction',
-    typicalCloudSavings: 'Typical cloud savings',
-    fasterDeployment: '10-15x Faster',
-    deploymentSpeeds: 'Deployment speeds',
+    guaranteesBenefits: 'Our Benefits & Value',
+    provenResults: 'Proven Results',
+    successfulDeliveries: 'Successful project deliveries',
+    costReduction: '20-30% Cost Reduction',
+    typicalCloudSavings: 'Typical infrastructure savings',
+    fasterDeployment: 'Rapid Deployment',
+    deploymentSpeeds: 'Weeks instead of months',
     uptime: '99.9% Uptime',
     achievementTarget: 'Achievement target',
     startDevelopmentJourney: 'Start Your Development Journey',
@@ -251,7 +251,7 @@ export const en = {
     consultationReceived: 'Your consultation request has been received. Our technical team will contact you within 24 hours to discuss your project requirements and schedule your free consultation.',
     submitAnotherInquiry: 'Submit Another Inquiry',
     getFreeConsultation: 'Get a free consultation to discuss your project requirements and receive a detailed development roadmap.',
-    requestFreeConsultation: 'Request Free Consultation',
+    requestFreeConsultation: 'Get in Touch',
     submitting: 'Submitting...',
     agreementText: 'By submitting this form, you agree to our privacy policy and terms of service.',
     firstName: 'First Name',
@@ -311,7 +311,6 @@ export const en = {
     mvpDevelopment: {
       title: 'MVP Development',
       description: 'Early-stage startups',
-      subtitle: '≤10 developers',
       features: [
         'Web app or mobile MVP',
         'Basic automation setup',
@@ -322,7 +321,6 @@ export const en = {
     saasPlatform: {
       title: 'SaaS Platform',
       description: 'Growing startups',
-      subtitle: '10-50 developers',
       features: [
         'Everything in MVP',
         'Full SaaS platform',
@@ -334,7 +332,6 @@ export const en = {
     enterprisePlatform: {
       title: 'Enterprise Platform',
       description: 'Scale-ups',
-      subtitle: '50+ developers',
       features: [
         'Everything in SaaS',
         'Multi-platform ecosystem',
