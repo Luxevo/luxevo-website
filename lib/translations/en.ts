@@ -12,7 +12,7 @@ export const en = {
     title: "Build, Scale, and Automate Your Startup's Technology",
     subtitle: "From web apps to mobile platforms, SaaS solutions to automation systems - we handle your complete technical journey with proven results and rapid delivery.",
     startProject: 'Start Your Project',
-    freeConsultation: 'Free consultation',
+    freeConsultation: 'Get In Touch',
     viewWork: 'View Our Work',
   },
   // Features Section

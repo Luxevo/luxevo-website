@@ -31,6 +31,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
     { label: t.nav.features, href: "#features" },
     { label: t.nav.specializations, href: "#use-cases" },
     { label: t.nav.packages, href: "#packages" },
+    { label: "Our Work", href: "/our-work" },
     { label: t.nav.contact, href: "#contact" },
   ]
 

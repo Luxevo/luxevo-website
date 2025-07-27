@@ -16,6 +16,7 @@ import StructuredData from "@/components/structured-data"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useTranslations, defaultLocale, type Locale } from "@/lib/i18n"
+import Link from "next/link"
 
 export default function Home() {
   const [locale, setLocale] = React.useState<Locale>(defaultLocale)
@@ -44,13 +45,14 @@ export default function Home() {
               <TypingPromptInput />
 
               <div className="flex flex-wrap justify-center gap-3 mt-16">
-                <Button className="flex items-center gap-3 px-5 py-6 h-[60px] bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/0 via-brand-orange/20 to-brand-orange/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-100%] group-hover:translate-x-[100%]"></div>
-                  <Zap className="h-5 w-5 text-white relative z-10" />
-                  <div className="flex flex-col items-start relative z-10">
-                    <span className="text-[15px] font-medium">{t.hero.startProject}</span>
-                    <span className="text-xs text-blue-100 -mt-0.5">{t.hero.freeConsultation}</span>
-                  </div>
+                <Button asChild>
+                  <Link href="#contact" className="flex items-center gap-3 px-5 py-6 h-[60px] bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+                    <Zap className="h-5 w-5 text-white relative z-10" />
+                    <div className="flex flex-col items-start relative z-10">
+                      <span className="text-[15px] font-medium">{t.hero.startProject}</span>
+                      <span className="text-xs text-blue-100 -mt-0.5">{t.hero.freeConsultation}</span>
+                    </div>
+                  </Link>
                 </Button>
                 <Button className="px-5 py-6 h-[60px] rounded-xl border-2 border-brand-orange bg-transparent hover:bg-brand-orange hover:text-white text-[15px] font-medium text-brand-orange transition-all duration-300">
                   {t.hero.viewWork}
