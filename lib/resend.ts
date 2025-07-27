@@ -1,13 +1,5 @@
 import { Resend } from 'resend';
 
-const apiKey = process.env.RESEND_API_KEY;
-
-if (!apiKey) {
-  throw new Error('RESEND_API_KEY is not defined in environment variables');
-}
-
-const resend = new Resend(apiKey);
-
 export interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -19,8 +11,22 @@ export interface ContactFormData {
   message: string;
 }
 
+// Don't initialize Resend client at module level - do it in the function instead
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not defined in environment variables');
+  }
+  
+  return new Resend(apiKey);
+}
+
 export async function sendContactEmail(formData: ContactFormData) {
   try {
+    // Create the Resend client only when the function is called
+    const resend = getResendClient();
+    
     // Email to you (notification)
     const notificationEmail = await resend.emails.send({
       from: 'contact@luxevotech.com',
@@ -150,4 +156,4 @@ Luxévo Inc. - Full-Stack Development & Technical Solutions
     console.error('Error sending email:', error);
     return { success: false, error };
   }
-} 
+}

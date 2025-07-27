@@ -1,54 +1,28 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { sendContactEmail, ContactFormData } from '@/lib/resend';
-
-// Simple in-memory rate limiter (use Redis in production)
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const windowMs = 60 * 60 * 1000; // 1 hour
-  const maxRequests = 5; // 5 requests per hour
-  
-  const record = rateLimitMap.get(ip);
-  
-  if (!record || now > record.resetTime) {
-    rateLimitMap.set(ip, { count: 1, resetTime: now + windowMs });
-    return true;
-  }
-  
-  if (record.count >= maxRequests) {
-    return false;
-  }
-  
-  record.count++;
-  return true;
-}
+import { NextRequest, NextResponse } from "next/server";
+import { sendContactEmail, ContactFormData } from "@/lib/resend";
 
 export async function POST(request: NextRequest) {
   console.log('API route called');
   
-  // Rate limiting
-  const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
-  if (!checkRateLimit(ip)) {
-    return NextResponse.json(
-      { error: 'Too many requests. Please try again later.' },
-      { status: 429 }
-    );
-  }
+
   
   try {
-    // Check if API key is available
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY not found in environment');
+    // Check if we're in build mode - if so, just return early
+    if (process.env.NODE_ENV === 'production' && !process.env.RESEND_API_KEY) {
+      // During build time, just return a placeholder response
+      if (process.env.NEXT_PHASE === 'phase-production-build') {
+        return NextResponse.json({ error: 'Build time - API not available' }, { status: 503 });
+      }
+      
       return NextResponse.json(
-        { error: 'Email service not configured' },
+        { error: 'Email service not configured. Please set RESEND_API_KEY in your environment variables.' },
         { status: 500 }
       );
     }
 
+    // Rest of your code remains the same...
     const body = await request.json();
     
-    // Basic XSS sanitization
     const sanitize = (str: string) => {
       return str
         .replace(/</g, '&lt;')
@@ -69,7 +43,6 @@ export async function POST(request: NextRequest) {
       message: sanitize(body.message || ''),
     };
 
-    // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.company) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -77,7 +50,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       return NextResponse.json(
@@ -86,7 +58,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send emails
     const result = await sendContactEmail(formData);
 
     if (result.success) {
@@ -108,4 +79,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-} 
+}
