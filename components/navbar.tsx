@@ -30,7 +30,6 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   const navItems = [
     { label: t.nav.features, href: "#features" },
     { label: t.nav.specializations, href: "#use-cases" },
-    { label: t.nav.packages, href: "#packages" },
     { label: "Our Work", href: "/our-work" },
     { label: t.nav.contact, href: "#contact" },
   ]
@@ -39,83 +38,65 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   const logoSrc = mounted && theme === 'dark' ? '/luxevo-white-logo.png' : '/clients-logo/luxevo.png'
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2" aria-label="Luxévo Inc. Homepage">
-            <Image
-              src={logoSrc}
-              alt="Luxévo Inc. Logo"
-              width={150}
-              height={150}
-              priority
-            />
+    <header className="fixed top-0 z-50 w-full">
+      <div className="container flex items-center justify-center">
+        {/* Glassmorphism Navigation Menu with Logo inside */}
+        <nav className="flex items-center rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg gap-6 px-6	" aria-label="Main Navigation">
+          {/* Logo inside the menu */}
+          <Link href="/" className="flex items-center space-x-2 h-16" aria-label="Luxévo Inc. Homepage">
+          <Image src={logoSrc} alt="WEBNIQUE" width={140} height={80} className="scale-60" priority />
           </Link>
-        </div>
 
-        <nav className="hidden md:flex gap-6" aria-label="Main Navigation">
-          {navItems.map((item, index) => (
-            <Link key={index} href={item.href} className="text-sm font-medium transition-colors hover:text-primary">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-2">
+            {navItems.map((item, index) => (
+              <Link 
+                key={index} 
+                href={item.href} 
+                className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-full transition-all duration-300"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
 
-        <div className="flex items-center gap-4">
-          <LanguageSwitcher currentLocale={locale} onLocaleChange={onLocaleChange} />
-          <ThemeToggle />
+          {/* Right side controls */}
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher currentLocale={locale} onLocaleChange={onLocaleChange} />
+            <ThemeToggle />
 
-          <Button
-            asChild
-            className="hidden md:flex items-center gap-3 px-4 py-2 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl border-0 h-auto shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <Link href="#contact">
-              <Zap className="h-4 w-4 text-white" />
-              <div className="flex flex-col items-start">
-                <span className="text-sm font-medium">{t.common.startProject}</span>
-                <span className="text-xs text-blue-100 -mt-0.5">{t.common.freeConsultation}</span>
-              </div>
-            </Link>
-          </Button>
-
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="outline" size="icon" aria-label="Open Menu">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile Navigation">
-                {navItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <div className="flex items-center gap-4 mt-4">
-                  <ThemeToggle />
-                  <Button
-                    asChild
-                    className="w-full flex items-center gap-3 px-4 py-2 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl border-0 h-auto shadow-lg"
-                  >
-                    <Link href="#contact" onClick={() => setIsOpen(false)}>
-                      <Zap className="h-4 w-4 text-white" />
-                      <div className="flex flex-col items-start">
-                        <span className="text-sm font-medium">{t.common.startProject}</span>
-                        <span className="text-xs text-blue-100 -mt-0.5">{t.common.freeConsultation}</span>
-                      </div>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  aria-label="Open Menu"
+                  className="bg-white/10 dark:bg-black/20 backdrop-blur-md border-white/20 dark:border-white/10"
+                >
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-white/10 dark:bg-black/20 backdrop-blur-md border-white/20 dark:border-white/10">
+                <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile Navigation">
+                  {navItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="text-lg font-medium transition-colors hover:text-primary px-4 py-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
                     </Link>
-                  </Button>
-                </div>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
+                  ))}
+                  <div className="flex items-center gap-4 mt-4">
+                    <ThemeToggle />
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </nav>
       </div>
     </header>
   )

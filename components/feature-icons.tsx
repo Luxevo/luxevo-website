@@ -180,3 +180,130 @@ export const ZapIcon = () => (
     </defs>
   </svg>
 )
+
+export const ShopIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Commercial building structure */}
+    <rect x="3" y="6" width="18" height="14" fill="url(#shop-gradient)" fillOpacity="0.2" />
+    <rect x="3" y="6" width="18" height="14" stroke="url(#shop-gradient)" strokeWidth="2" fill="none" />
+    
+    {/* Building floors */}
+    <line x1="3" y1="10" x2="21" y2="10" stroke="url(#shop-gradient)" strokeWidth="1" />
+    <line x1="3" y1="14" x2="21" y2="14" stroke="url(#shop-gradient)" strokeWidth="1" />
+    <line x1="3" y1="18" x2="21" y2="18" stroke="url(#shop-gradient)" strokeWidth="1" />
+    
+    {/* Windows grid */}
+    <rect x="5" y="7" width="2" height="2" fill="#ffffff" />
+    <rect x="8" y="7" width="2" height="2" fill="#ffffff" />
+    <rect x="11" y="7" width="2" height="2" fill="#ffffff" />
+    <rect x="14" y="7" width="2" height="2" fill="#ffffff" />
+    <rect x="17" y="7" width="2" height="2" fill="#ffffff" />
+    
+    <rect x="5" y="11" width="2" height="2" fill="#ffffff" />
+    <rect x="8" y="11" width="2" height="2" fill="#ffffff" />
+    <rect x="11" y="11" width="2" height="2" fill="#ffffff" />
+    <rect x="14" y="11" width="2" height="2" fill="#ffffff" />
+    <rect x="17" y="11" width="2" height="2" fill="#ffffff" />
+    
+    <rect x="5" y="15" width="2" height="2" fill="#ffffff" />
+    <rect x="8" y="15" width="2" height="2" fill="#ffffff" />
+    <rect x="11" y="15" width="2" height="2" fill="#ffffff" />
+    <rect x="14" y="15" width="2" height="2" fill="#ffffff" />
+    <rect x="17" y="15" width="2" height="2" fill="#ffffff" />
+    
+    {/* Main entrance */}
+    <rect x="10" y="17" width="4" height="3" fill="#ffffff" />
+    <rect x="10" y="17" width="4" height="3" stroke="url(#shop-gradient)" strokeWidth="1" fill="none" />
+    
+    {/* Building sign */}
+    <rect x="8" y="4" width="8" height="2" fill="url(#shop-gradient)" />
+    
+    <defs>
+      <linearGradient id="shop-gradient" x1="3" y1="4" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#FDBA74" />
+        <stop offset="1" stopColor="#F97316" />
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const PhoneIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Phone body */}
+    <rect x="6" y="2" width="12" height="20" rx="3" fill="url(#phone-gradient)" fillOpacity="0.2" />
+    <rect x="6" y="2" width="12" height="20" rx="3" stroke="url(#phone-gradient)" strokeWidth="2" fill="none" />
+    
+    {/* Screen */}
+    <rect x="8" y="4" width="8" height="14" rx="1" fill="url(#phone-gradient)" fillOpacity="0.3" />
+    <rect x="8" y="4" width="8" height="14" rx="1" stroke="url(#phone-gradient)" strokeWidth="1" fill="none" />
+    
+    {/* Home button */}
+    <circle cx="12" cy="19" r="1" fill="url(#phone-gradient)" />
+    
+    {/* Speaker */}
+    <rect x="10" y="3" width="4" height="1" rx="0.5" fill="url(#phone-gradient)" />
+    
+    {/* Screen content */}
+    <rect x="9" y="6" width="6" height="1" fill="#ffffff" />
+    <rect x="9" y="8" width="4" height="1" fill="#ffffff" />
+    <rect x="9" y="10" width="5" height="1" fill="#ffffff" />
+    <rect x="9" y="12" width="3" height="1" fill="#ffffff" />
+    
+    <defs>
+      <linearGradient id="phone-gradient" x1="6" y1="2" x2="18" y2="22" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#22D3EE" />
+        <stop offset="1" stopColor="#06B6D4" />
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const DesignIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* UI/UX interface */}
+    <rect x="4" y="6" width="16" height="12" rx="2" fill="url(#design-gradient)" fillOpacity="0.2" />
+    <rect x="4" y="6" width="16" height="12" rx="2" stroke="url(#design-gradient)" strokeWidth="2" fill="none" />
+    
+    {/* UI elements */}
+    <rect x="6" y="8" width="4" height="2" rx="1" fill="url(#design-gradient)" />
+    <rect x="11" y="8" width="7" height="1" rx="0.5" fill="url(#design-gradient)" />
+    <rect x="6" y="11" width="6" height="1" rx="0.5" fill="url(#design-gradient)" />
+    <rect x="6" y="13" width="8" height="1" rx="0.5" fill="url(#design-gradient)" />
+    <rect x="6" y="15" width="5" height="1" rx="0.5" fill="url(#design-gradient)" />
+    
+    {/* Cursor/pointer */}
+    <path d="M18 3L20 5L18 7" stroke="url(#design-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    
+    <defs>
+      <linearGradient id="design-gradient" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#A855F7" />
+        <stop offset="1" stopColor="#8B5CF6" />
+      </linearGradient>
+    </defs>
+  </svg>
+)
+
+export const BrandIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Simple logo/brand mark */}
+    <rect x="6" y="4" width="12" height="8" rx="2" fill="url(#brand-gradient)" fillOpacity="0.2" />
+    <rect x="6" y="4" width="12" height="8" rx="2" stroke="url(#brand-gradient)" strokeWidth="2" fill="none" />
+    
+    {/* Brand text/logo */}
+    <rect x="8" y="6" width="8" height="1" rx="0.5" fill="url(#brand-gradient)" />
+    <rect x="8" y="8" width="6" height="1" rx="0.5" fill="url(#brand-gradient)" />
+    <rect x="8" y="10" width="7" height="1" rx="0.5" fill="url(#brand-gradient)" />
+    
+    {/* Color palette */}
+    <circle cx="7" cy="16" r="2" fill="#FF6B6B" />
+    <circle cx="12" cy="16" r="2" fill="#4ECDC4" />
+    <circle cx="17" cy="16" r="2" fill="#45B7D1" />
+    
+    <defs>
+      <linearGradient id="brand-gradient" x1="6" y1="4" x2="18" y2="12" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#FF6B6B" />
+        <stop offset="1" stopColor="#4ECDC4" />
+      </linearGradient>
+    </defs>
+  </svg>
+)

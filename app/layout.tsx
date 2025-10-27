@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Complete web development, SaaS platforms, mobile apps, automation, and infrastructure solutions. From concept to scale for Quebec FinTech, HealthTech, and FoodTech startups.",
   keywords: "web development, SaaS development, mobile apps, automation, technical infrastructure, DevOps consulting, Quebec startups, FinTech, HealthTech, full-stack development",
+  icons: {
+    icon: '/icon-tab.png',
+  },
   openGraph: {
     type: "website",
     locale: "en_CA",

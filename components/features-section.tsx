@@ -8,6 +8,10 @@ import {
   ServerIcon,
   LockIcon,
   ZapIcon,
+  ShopIcon,
+  PhoneIcon,
+  DesignIcon,
+  BrandIcon,
 } from "@/components/feature-icons"
 import { useTranslations, type Locale } from "@/lib/i18n"
 
@@ -19,7 +23,7 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
   const t = useTranslations(locale)
   const features = [
     {
-      icon: <BotIcon />,
+      icon: <ZapIcon />,
       title: t.featuresContent.webDevelopment.title,
       description: t.featuresContent.webDevelopment.description,
       accentColor: "rgba(36, 101, 237, 0.5)",
@@ -31,7 +35,7 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
       accentColor: "rgba(236, 72, 153, 0.5)",
     },
     {
-      icon: <DatabaseIcon />,
+      icon: <PhoneIcon />,
       title: t.featuresContent.mobileApps.title,
       description: t.featuresContent.mobileApps.description,
       accentColor: "rgba(34, 211, 238, 0.5)",
@@ -43,25 +47,25 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
       accentColor: "rgba(132, 204, 22, 0.5)",
     },
     {
-      icon: <FileTextIcon />,
-      title: t.featuresContent.cloudInfrastructure.title,
-      description: t.featuresContent.cloudInfrastructure.description,
+      icon: <ShopIcon />,
+      title: "Plateforme E-commerce Complète",
+      description: "Boutiques en ligne modernes avec gestion des produits, panier, paiements sécurisés, et analytics avancées pour maximiser vos ventes.",
       accentColor: "rgba(249, 115, 22, 0.5)",
     },
     {
-      icon: <ServerIcon />,
-      title: t.featuresContent.devOpsCiCd.title,
-      description: t.featuresContent.devOpsCiCd.description,
+      icon: <DesignIcon />,
+      title: "UX/UI Design",
+      description: "Design d'interface utilisateur et expérience utilisateur optimisée pour créer des produits digitaux intuitifs, accessibles et engageants.",
       accentColor: "rgba(168, 85, 247, 0.5)",
     },
     {
-      icon: <LockIcon />,
-      title: t.featuresContent.securityCompliance.title,
-      description: t.featuresContent.securityCompliance.description,
-      accentColor: "rgba(251, 191, 36, 0.5)",
+      icon: <BrandIcon />,
+      title: "Identité de Marque",
+      description: "Création d'identité visuelle complète, logo, charte graphique et guidelines de marque pour établir une présence forte et cohérente.",
+      accentColor: "rgba(255, 107, 107, 0.5)",
     },
     {
-      icon: <ZapIcon />,
+      icon: <BotIcon />,
       title: t.featuresContent.aiIntegration.title,
       description: t.featuresContent.aiIntegration.description,
       accentColor: "rgba(16, 185, 129, 0.5)",
@@ -85,7 +89,7 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

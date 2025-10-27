@@ -275,7 +275,7 @@ export const en = {
   featuresContent: {
     webDevelopment: {
       title: 'Web Development',
-      description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies for optimal performance and user experience.',
+      description: 'Modern, responsive websites and web platforms for optimal performance and user experience.',
     },
     saasPlatforms: {
       title: 'SaaS Platforms',

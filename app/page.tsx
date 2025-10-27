@@ -23,13 +23,15 @@ export default function Home() {
   const t = useTranslations(locale)
 
   return (
+
     <>
+            <Navbar locale={locale} onLocaleChange={setLocale} />
+
       <StructuredData />
       <div className="flex min-h-screen flex-col">
-        <Navbar locale={locale} onLocaleChange={setLocale} />
 
         {/* Hero Section */}
-        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
           <CssGridBackground />
           <FramerSpotlight />
           <div className="container px-4 md:px-6 py-16 md:py-20">
