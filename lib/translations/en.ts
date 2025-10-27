@@ -1,9 +1,9 @@
 export const en = {
   // Navigation
   nav: {
-    features: 'Features',
+    ourServices: 'Services',
+    ourWork: 'Projects',
     specializations: 'Specializations',
-    packages: 'Packages',
     contact: 'Contact',
   },
   // Hero Section

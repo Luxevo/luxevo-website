@@ -1,9 +1,9 @@
 export const fr = {
   // Navigation
   nav: {
-    features: 'Fonctionnalités',
+    ourServices: 'Services',
+    ourWork: 'Réalisations',
     specializations: 'Spécialisations',
-    packages: 'Forfaits',
     contact: 'Contact',
   },
   // Hero Section

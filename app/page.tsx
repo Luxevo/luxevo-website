@@ -67,51 +67,6 @@ export default function Home() {
         {/* Features Section */}
         <FeaturesSection locale={locale} />
 
-        {/* How It Works */}
-        <section className="py-20" id="how-it-works" aria-labelledby="how-it-works-heading">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2">
-                <h2 id="how-it-works-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  {t.howItWorks.title}
-                </h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  {t.howItWorks.subtitle}
-                </p>
-              </div>
-            </div>
-            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 items-start">
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="text-2xl font-bold">1</span>
-                </div>
-                <h3 className="text-xl font-bold">{t.howItWorks.steps.discovery.title}</h3>
-                <p className="text-muted-foreground">
-                  {t.howItWorks.steps.discovery.description}
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="text-2xl font-bold">2</span>
-                </div>
-                <h3 className="text-xl font-bold">{t.howItWorks.steps.development.title}</h3>
-                <p className="text-muted-foreground">
-                  {t.howItWorks.steps.development.description}
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <span className="text-2xl font-bold">3</span>
-                </div>
-                <h3 className="text-xl font-bold">{t.howItWorks.steps.deployment.title}</h3>
-                <p className="text-muted-foreground">
-                  {t.howItWorks.steps.deployment.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Use Cases */}
         <UseCases locale={locale} />
 
@@ -436,93 +391,7 @@ export default function Home() {
         {/* Service Packages Section */}
         <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted/20" aria-labelledby="packages-heading">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
-                  {t.packages.badge}
-                </div>
-                <h2 id="packages-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  {t.packages.title}
-                </h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  {t.packages.subtitle}
-                </p>
-              </div>
-            </div>
 
-            <div className="grid gap-8 lg:grid-cols-3 mb-16">
-              {/* Starter Package */}
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
-                  <div className="flex flex-col h-full">
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.mvpDevelopment.title}</h3>
-                      <p className="text-muted-foreground">{t.packagesContent.mvpDevelopment.description}</p>
-                    </div>
-                    <div className="flex-1">
-                      <ul className="space-y-3 text-sm">
-                        {t.packagesContent.mvpDevelopment.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Growth Package */}
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent/30 to-primary/30 rounded-2xl blur opacity-100 transition duration-1000"></div>
-                <div className="relative bg-background border-2 border-accent rounded-2xl p-8 h-full shadow-xl">
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-accent text-white px-4 py-2 rounded-full text-sm font-medium">{t.common.mostPopular}</span>
-                  </div>
-                  <div className="flex flex-col h-full">
-                    <div className="text-center mb-6 pt-4">
-                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.saasPlatform.title}</h3>
-                      <p className="text-muted-foreground">{t.packagesContent.saasPlatform.description}</p>
-                    </div>
-                    <div className="flex-1">
-                      <ul className="space-y-3 text-sm">
-                        {t.packagesContent.saasPlatform.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Enterprise Package */}
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                <div className="relative bg-background border-2 border-primary/20 rounded-2xl p-8 h-full hover:border-primary/40 transition-all duration-300">
-                  <div className="flex flex-col h-full">
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold mb-2">{t.packagesContent.enterprisePlatform.title}</h3>
-                      <p className="text-muted-foreground">{t.packagesContent.enterprisePlatform.description}</p>
-                    </div>
-                    <div className="flex-1">
-                      <ul className="space-y-3 text-sm">
-                        {t.packagesContent.enterprisePlatform.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Guarantees and Benefits */}
             <div className="bg-muted/30 dark:bg-muted/10 rounded-2xl p-8 mb-16">

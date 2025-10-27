@@ -28,9 +28,10 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   }, [])
 
   const navItems = [
-    { label: t.nav.features, href: "#features" },
+    { label: t.nav.ourServices, href: "#features" },
+    { label: t.nav.ourWork, href: "/our-work" },
+
     { label: t.nav.specializations, href: "#use-cases" },
-    { label: "Our Work", href: "/our-work" },
     { label: t.nav.contact, href: "#contact" },
   ]
 
@@ -38,7 +39,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
   const logoSrc = mounted && theme === 'dark' ? '/luxevo-white-logo.png' : '/clients-logo/luxevo.png'
 
   return (
-    <header className="fixed top-0 z-50 w-full">
+    <header className="fixed top-5 z-50 w-full">
       <div className="container flex items-center justify-center">
         {/* Glassmorphism Navigation Menu with Logo inside */}
         <nav className="flex items-center rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg gap-6 px-6	" aria-label="Main Navigation">
@@ -53,7 +54,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
               <Link 
                 key={index} 
                 href={item.href} 
-                className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-full transition-all duration-300"
+                  className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#564eba]  hover:bg-white/20 dark:hover:bg-white/10 rounded-full transition-all duration-300"
               >
                 {item.label}
               </Link>
