@@ -80,7 +80,7 @@ export default function UseCases({ locale }: UseCasesProps) {
             <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
               {t.specializations.badge}
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t.specializations.title}</h2>
+            <h2 className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl">{t.specializations.title}</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
               {t.specializations.subtitle}
             </p>

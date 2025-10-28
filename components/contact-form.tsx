@@ -69,7 +69,7 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
       <Card>
         <CardContent className="pt-6 flex flex-col items-center justify-center min-h-[400px] text-center">
           <CheckCircle2 className="h-16 w-16 text-primary mb-4" />
-          <h3 className="text-2xl font-bold mb-2">{t.common.thankYou}</h3>
+          <h3 className="text-2xl font-boldonse mb-2">{t.common.thankYou}</h3>
           <p className="text-muted-foreground mb-6">
             {t.common.consultationReceived}
           </p>
@@ -107,70 +107,74 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
               <span className="text-sm">{error}</span>
             </div>
           )}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">{t.common.firstName}</Label>
-              <Input 
-                id="firstName" 
-                placeholder="John" 
-                required 
-                value={formData.firstName}
-                onChange={(e) => handleInputChange('firstName', e.target.value)}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">{t.common.lastName}</Label>
-              <Input 
-                id="lastName" 
-                placeholder="Doe" 
-                required 
-                value={formData.lastName}
-                onChange={(e) => handleInputChange('lastName', e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">{t.common.workEmail}</Label>
-            <Input 
-              id="email" 
-              type="email" 
-              placeholder="john.doe@company.com" 
-              required 
-              value={formData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">{t.common.phoneNumber}</Label>
-            <Input 
-              id="phone" 
-              type="tel" 
-              placeholder="+1 (514) 555-0123" 
-              value={formData.phone}
-              onChange={(e) => handleInputChange('phone', e.target.value)}
-            />
-            <p className="text-xs text-muted-foreground">{t.common.fasterContact}</p>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="company">{t.common.company}</Label>
-            <Input 
-              id="company" 
-              placeholder="Acme Inc." 
-              required 
-              value={formData.company}
-              onChange={(e) => handleInputChange('company', e.target.value)}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="role">{t.common.yourRole}</Label>
-            <Input 
-              id="role" 
-              placeholder="CTO, IT Director, etc." 
-              required 
-              value={formData.role}
-              onChange={(e) => handleInputChange('role', e.target.value)}
-            />
-          </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <div className="space-y-2">
+               <Label htmlFor="firstName">{t.common.firstName}</Label>
+               <Input 
+                 id="firstName" 
+                 placeholder="John" 
+                 required 
+                 value={formData.firstName}
+                 onChange={(e) => handleInputChange('firstName', e.target.value)}
+               />
+             </div>
+             <div className="space-y-2">
+               <Label htmlFor="lastName">{t.common.lastName}</Label>
+               <Input 
+                 id="lastName" 
+                 placeholder="Doe" 
+                 required 
+                 value={formData.lastName}
+                 onChange={(e) => handleInputChange('lastName', e.target.value)}
+               />
+             </div>
+           </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <div className="space-y-2">
+               <Label htmlFor="email">{t.common.workEmail}</Label>
+               <Input 
+                 id="email" 
+                 type="email" 
+                 placeholder="john.doe@company.com" 
+                 required 
+                 value={formData.email}
+                 onChange={(e) => handleInputChange('email', e.target.value)}
+               />
+             </div>
+             <div className="space-y-2">
+               <Label htmlFor="phone">{t.common.phoneNumber}</Label>
+               <Input 
+                 id="phone" 
+                 type="tel" 
+                 placeholder="+1 (514) 555-0123" 
+                 value={formData.phone}
+                 onChange={(e) => handleInputChange('phone', e.target.value)}
+               />
+               <p className="text-xs text-muted-foreground">{t.common.fasterContact}</p>
+             </div>
+           </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <div className="space-y-2">
+               <Label htmlFor="company">{t.common.company}</Label>
+               <Input 
+                 id="company" 
+                 placeholder="Acme Inc." 
+                 required 
+                 value={formData.company}
+                 onChange={(e) => handleInputChange('company', e.target.value)}
+               />
+             </div>
+             <div className="space-y-2">
+               <Label htmlFor="role">{t.common.yourRole}</Label>
+               <Input 
+                 id="role" 
+                 placeholder="CTO, IT Director, etc." 
+                 required 
+                 value={formData.role}
+                 onChange={(e) => handleInputChange('role', e.target.value)}
+               />
+             </div>
+           </div>
           <div className="space-y-2">
             <Label htmlFor="size">{t.common.organizationSize}</Label>
             <Select value={formData.size} onValueChange={(value) => handleInputChange('size', value)}>

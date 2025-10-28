@@ -79,15 +79,9 @@ export default function Home() {
               <h1 className="text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight">   
                   Le digital
                 <br />
-                est à <span className="italic">portée</span><br />
+                est à portée<br />
                 de mains 
               </h1>
-
-              {/* Subtitle */}
-              <p className="text-xl text-gray-600 max-w-2xl mb-12 text-center">
-                {t.hero.subtitle}
-              </p>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
                 <Button asChild className="bg-[#1A2234] hover:bg-[#1A2234]/90 text-white px-8 py-4 rounded-xl text-lg font-medium">
@@ -119,7 +113,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
                   {t.partners.badge}
                 </div>
-                <h2 id="partners-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 id="partners-heading" className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl">
                   {t.partners.title}
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -436,7 +430,7 @@ export default function Home() {
 
             {/* Guarantees and Benefits */}
             <div className="bg-muted/30 dark:bg-muted/10 rounded-2xl p-8 mb-16">
-              <h3 className="text-2xl font-bold text-center mb-8">{t.common.guaranteesBenefits}</h3>
+              <h3 className="text-2xl font-boldonse text-center mb-8">{t.common.guaranteesBenefits}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col items-center text-center">
                   <Users className="h-8 w-8 text-primary mb-3" />
@@ -468,9 +462,9 @@ export default function Home() {
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-muted/50 dark:bg-muted/10" aria-labelledby="contact-heading">
           <div className="container px-4 md:px-6">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 id="contact-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                <h2 id="contact-heading" className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl mb-4">
                   {t.contact.title}
                 </h2>
                 <p className="text-muted-foreground md:text-xl">

@@ -39,7 +39,7 @@ export default function FeatureCard({
         <div className="p-6 h-full flex flex-col relative z-10">
           <FrostedGlassIcon icon={icon} color={accentColor} className="mb-4 self-start" />
 
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
+          <h3 className="text-xl font-boldonse mb-2">{title}</h3>
           <p className="text-muted-foreground flex-grow">{description}</p>
         </div>
 

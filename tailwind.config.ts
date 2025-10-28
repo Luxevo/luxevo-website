@@ -20,8 +20,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        figtree: ["var(--font-figtree)", "sans-serif"],
+        figtree: ["Figtree", "var(--font-figtree)", "sans-serif"],
         boldonse: ["Boldonse", "sans-serif"],
+        sans: ["Figtree", "var(--font-figtree)", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

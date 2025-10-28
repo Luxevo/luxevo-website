@@ -14,13 +14,13 @@ export default function Footer({ locale = 'en' }: FooterProps) {
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">{t.footer.company}</h3>
+            <h3 className="text-lg font-boldonse">{t.footer.company}</h3>
             <p className="text-sm text-muted-foreground">
               {t.footer.description}
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">{t.footer.services}</h3>
+            <h3 className="text-sm font-boldonse">{t.footer.services}</h3>
             <nav aria-label="Services Navigation">
               <ul className="space-y-2 text-sm">
                 <li>
@@ -47,7 +47,7 @@ export default function Footer({ locale = 'en' }: FooterProps) {
             </nav>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">{t.footer.resources}</h3>
+            <h3 className="text-sm font-boldonse">{t.footer.resources}</h3>
             <nav aria-label="Resources Navigation">
               <ul className="space-y-2 text-sm">
                 <li>
@@ -74,7 +74,7 @@ export default function Footer({ locale = 'en' }: FooterProps) {
             </nav>
           </div>
           <div className="space-y-4">
-            <h3 className="text-sm font-bold">{t.footer.companySection}</h3>
+            <h3 className="text-sm font-boldonse">{t.footer.companySection}</h3>
             <nav aria-label="Company Navigation">
               <ul className="space-y-2 text-sm">
                 <li>

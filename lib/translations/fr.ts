@@ -18,7 +18,7 @@ export const fr = {
   // Features Section
   features: {
     badge: 'Nos Services',
-    title: 'Infrastructure Technique Complète',
+    title: 'Votre Partenaire Digital de Confiance',
     subtitle: 'De l\'architecture initiale au déploiement en production, nous gérons tous les aspects de votre infrastructure technique.',
     items: {
       ai: {

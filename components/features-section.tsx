@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import FeatureCard from "@/components/feature-card"
 import {
   BotIcon,
@@ -21,6 +24,30 @@ interface FeaturesSectionProps {
 
 export default function FeaturesSection({ locale }: FeaturesSectionProps) {
   const t = useTranslations(locale)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
+
+  // Track mouse movement
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const section = document.getElementById('features')
+      if (section) {
+        const rect = section.getBoundingClientRect()
+        setMousePosition({ 
+          x: e.clientX - rect.left, 
+          y: e.clientY - rect.top 
+        })
+      }
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('scroll', handleMouseMove) // Recalculate on scroll too
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('scroll', handleMouseMove)
+    }
+  }, [])
+
   const features = [
     {
       icon: <ZapIcon />,
@@ -73,14 +100,30 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
   ]
 
   return (
-    <section className="py-20 bg-muted/50 dark:bg-muted/10" id="features" aria-labelledby="features-heading">
-      <div className="container px-4 md:px-6">
+    <section 
+      className="relative py-20 overflow-hidden bg-muted/60 dark:bg-muted/15 rounded-t-3xl rounded-b-3xl" 
+      id="features" 
+      aria-labelledby="features-heading"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      {/* Mouse-following gradient */}
+      <div 
+        className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.1), transparent 40%)`,
+          opacity: isHovering ? 1 : 0.3
+        }}
+      />
+
+
+      <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
               {t.features.badge}
             </div>
-            <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 id="features-heading" className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl">
               {t.features.title}
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">

@@ -10,6 +10,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Figtree';
+  src: url('/font/Figtree-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/font/Figtree-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -79,7 +95,13 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground bg-background;
+    @apply text-foreground bg-background font-figtree;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Boldonse', sans-serif;
+  }
+  p, span, div, a, button, input, textarea, select, label {
+    font-family: 'Figtree', sans-serif;
   }
 }
 
