@@ -42,7 +42,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
     <header className="fixed top-5 z-50 w-full">
       <div className="container flex items-center justify-center">
         {/* Glassmorphism Navigation Menu with Logo inside */}
-        <nav className="flex items-center rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg gap-6 px-6	" aria-label="Main Navigation">
+        <nav className="flex items-center rounded-2xl bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg gap-6 px-6	" aria-label="Main Navigation">
           {/* Logo inside the menu */}
           <Link href="/" className="flex items-center space-x-2 h-16" aria-label="Luxévo Inc. Homepage">
           <Image src={logoSrc} alt="WEBNIQUE" width={140} height={80} className="scale-60" priority />
@@ -51,10 +51,10 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-2">
             {navItems.map((item, index) => (
-              <Link 
-                key={index} 
-                href={item.href} 
-                  className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-[#564eba]  hover:bg-white/20 dark:hover:bg-white/10 rounded-full transition-all duration-300"
+              <Link
+                key={index}
+                href={item.href}
+                className="px-5 py-2.5 text-sm font-medium text-gray-800 dark:text-white rounded-full border border-transparent transition-all duration-300 ease-out hover:bg-gradient-to-b hover:from-white/70 hover:to-white/50 dark:hover:from-white/50 dark:hover:to-white/30 hover:backdrop-blur-[120px] hover:backdrop-saturate-[180%] hover:backdrop-brightness-110 hover:shadow-[0_8px_30px_rgba(255,255,255,0.15),0_2px_10px_rgba(255,255,255,0.1),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.05)] hover:border-white/40 dark:hover:border-white/30"
               >
                 {item.label}
               </Link>
@@ -84,7 +84,7 @@ export default function Navbar({ locale, onLocaleChange }: NavbarProps) {
                     <Link
                       key={index}
                       href={item.href}
-                      className="text-lg font-medium transition-colors hover:text-primary px-4 py-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20"
+                      className="text-lg font-medium px-5 py-3 rounded-full border border-transparent hover:bg-gradient-to-b hover:from-white/70 hover:to-white/50 dark:hover:from-white/50 dark:hover:to-white/30 hover:backdrop-blur-[120px] hover:backdrop-saturate-[180%] hover:backdrop-brightness-110 hover:shadow-[0_8px_30px_rgba(255,255,255,0.15),0_2px_10px_rgba(255,255,255,0.1),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.05)] hover:border-white/40 dark:hover:border-white/30 transition-all duration-300 ease-out"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}
