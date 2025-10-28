@@ -9,7 +9,7 @@ export const fr = {
   // Hero Section
   hero: {
     badge: 'Développement Full-Stack & Solutions Techniques',
-    title: 'Construisez, Améliorez et Automatisez la Technologie de Votre Startup',
+    title: 'Le digital à portée de main',
     subtitle: 'Des applications web aux plateformes mobiles, des solutions SaaS aux systèmes d\'automatisation - nous gérons votre parcours technique complet avec des résultats prouvés et une livraison rapide.',
     startProject: 'Démarrer Votre Projet',
     freeConsultation: 'Consultation gratuite',

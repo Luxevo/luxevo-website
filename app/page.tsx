@@ -31,37 +31,78 @@ export default function Home() {
       <div className="flex min-h-screen flex-col">
 
         {/* Hero Section */}
-        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-          <CssGridBackground />
-          <FramerSpotlight />
-          <div className="container px-4 md:px-6 py-16 md:py-20">
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-6">{t.hero.badge}</div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6">
-                {t.hero.title}
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-gray-50 to-white">
+          {/* Abstract Background Shapes */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Left abstract shape - Purple/Blue */}
+            <div className="absolute -left-32 -top-32 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-blue-500/30 rounded-full blur-3xl animate-pulse" style={{
+              animation: 'float 6s ease-in-out infinite, pulse 4s ease-in-out infinite'
+            }}></div>
+            <div className="absolute left-20 top-40 w-64 h-64 bg-gradient-to-br from-purple-300/20 to-blue-400/20 rounded-full blur-2xl" style={{
+              animation: 'bounce 3s ease-in-out infinite, drift 8s ease-in-out infinite'
+            }}></div>
+            
+            {/* Right abstract shape - Orange to Purple */}
+            <div className="absolute right-0 top-20 w-80 h-[600px] bg-gradient-to-b from-orange-400/25 via-pink-400/20 to-purple-500/25 rounded-full blur-3xl" style={{
+              animation: 'float 5s ease-in-out infinite, rotate 10s linear infinite'
+            }}></div>
+            <div className="absolute right-20 top-60 w-48 h-48 bg-gradient-to-br from-orange-300/15 to-purple-400/15 rounded-full blur-2xl" style={{
+              animation: 'bounce 2.5s ease-in-out infinite, drift 7s ease-in-out infinite'
+            }}></div>
+          </div>
+
+          {/* Custom CSS animations */}
+          <style jsx>{`
+            @keyframes float {
+              0%, 100% { transform: translateY(0px) translateX(0px); }
+              25% { transform: translateY(-20px) translateX(10px); }
+              50% { transform: translateY(-10px) translateX(-15px); }
+              75% { transform: translateY(-30px) translateX(5px); }
+            }
+            @keyframes drift {
+              0%, 100% { transform: translateX(0px) translateY(0px); }
+              33% { transform: translateX(30px) translateY(-15px); }
+              66% { transform: translateX(-20px) translateY(20px); }
+            }
+            @keyframes rotate {
+              0% { transform: rotate(0deg); }
+              25% { transform: rotate(45deg); }
+              50% { transform: rotate(25deg); }
+              75% { transform: rotate(50deg); }
+              100% { transform: rotate(0deg); }
+            }
+          `}</style>
+
+          <div className="container px-4 md:px-6 py-20 relative z-10">
+            <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+              {/* Title with arrow */}
+              <h1 className="text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight">   
+                  Le digital
+                <br />
+                est à <span className="italic">portée</span><br />
+                de mains 
               </h1>
-              <p className="text-xl text-muted-foreground md:text-2xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-2xl mb-12">
+
+              {/* Subtitle */}
+              <p className="text-xl text-gray-600 max-w-2xl mb-12 text-center">
                 {t.hero.subtitle}
               </p>
 
-              <TypingPromptInput />
-
-              <div className="flex flex-wrap justify-center gap-3 mt-16">
-                <Button asChild>
-                  <Link href="#contact" className="flex items-center gap-3 px-5 py-6 h-[60px] bg-brand-blue hover:bg-brand-blue/90 text-white rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
-                    <Zap className="h-5 w-5 text-white relative z-10" />
-                    <div className="flex flex-col items-start relative z-10">
-                      <span className="text-[15px] font-medium">{t.hero.startProject}</span>
-                      <span className="text-xs text-blue-100 -mt-0.5">{t.hero.freeConsultation}</span>
-                    </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
+                <Button asChild className="bg-[#1A2234] hover:bg-[#1A2234]/90 text-white px-8 py-4 rounded-xl text-lg font-medium">
+                  <Link href="#contact">
+                    {t.hero.startProject}
                   </Link>
                 </Button>
-                <Button className="px-5 py-6 h-[60px] rounded-xl border-2 border-brand-orange bg-transparent hover:bg-brand-orange hover:text-white text-[15px] font-medium text-brand-orange transition-all duration-300">
-                  {t.hero.viewWork}
+                <Button asChild variant="outline" className="border-2 border-[#1A2234] text-[#1A2234] hover:bg-[#1A2234] hover:text-white px-8 py-4 rounded-xl text-lg font-medium">
+                  <Link href="/our-work">
+                    {t.hero.viewWork}
+                  </Link>
                 </Button>
               </div>
             </div>
-          </div>
+          </div>        
         </section>
 
         {/* Features Section */}
