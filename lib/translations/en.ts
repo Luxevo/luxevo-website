@@ -4,6 +4,7 @@ export const en = {
     ourServices: 'Services',
     ourWork: 'Projects',
     specializations: 'Specializations',
+    about: 'About',
     contact: 'Contact',
   },
   // Hero Section
@@ -337,6 +338,46 @@ export const en = {
       saasPlatform: 'SaaS Platform',
       mobileApp: 'Mobile App',
       webAgency: 'Web Agency',
+    },
+  },
+  // About page
+  about: {
+    badge: 'About Luxévo',
+    title: 'About Luxévo',
+    subtitle: 'Founded in 2024, Luxévo leverages more than 6 years of combined experience. Driven by a passionate team, the company transforms every idea into a tailor-made digital solution.',
+    mission: {
+      title: 'Our Mission',
+      description: 'At Luxévo, we believe technology must first and foremost serve humanity.\n\nOur mission: making quality digital solutions accessible to all businesses, regardless of their size or level of expertise.',
+      values: {
+        innovation: {
+          title: 'Continuous Innovation',
+          description: 'We constantly explore new technologies to design modern, performant and sustainable solutions.',
+        },
+        collaboration: {
+          title: 'Transparent Collaboration',
+          description: 'Every project is a partnership. We move forward hand in hand with our clients to understand their needs, challenges and ambitions.',
+        },
+        excellence: {
+          title: 'Technical Excellence',
+          description: 'From the first line of code to the final deployment, we deliver every project with rigor, passion and attention to detail.',
+        },
+      },
+    },
+    stats: {
+      projects: 'Projects completed',
+      experience: 'Years of experience',
+      clients: 'Satisfied and supported clients',
+      support: 'Dedicated and responsive support',
+    },
+    team: {
+      title: 'Our Team',
+      subtitle: 'Passionate experts who transform your ideas into reality',
+    },
+    cta: {
+      title: 'When do we start?',
+      subtitle: 'Together, let\'s transform your ideas into sustainable digital solutions.',
+      contact: 'Contact Us',
+      services: 'Our Services',
     },
   },
 } as const 

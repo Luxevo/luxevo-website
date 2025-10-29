@@ -4,6 +4,7 @@ export const fr = {
     ourServices: 'Services',
     ourWork: 'Réalisations',
     specializations: 'Spécialisations',
+    about: 'À propos',
     contact: 'Contact',
   },
   // Hero Section
@@ -337,6 +338,46 @@ export const fr = {
       saasPlatform: 'Plateforme SaaS',
       mobileApp: 'Application Mobile',
       webAgency: 'Agence Web',
+    },
+  },
+  // About page
+  about: {
+    badge: 'À Propos de Luxévo',
+    title: 'À propos de Luxévo',
+    subtitle: 'Fondée en 2024, Luxévo s\'appuie sur plus de 6 ans d\'expérience combinée. Portée par une équipe passionnée, l\'entreprise transforme chaque idée en solution digitale sur mesure.',
+    mission: {
+      title: 'Notre Mission',
+      description: 'Chez Luxévo, nous croyons que la technologie doit avant tout servir l\'humain.\n\nNotre mission : rendre les solutions digitales de qualité accessibles à toutes les entreprises, peu importe leur taille ou leur niveau d\'expertise.',
+      values: {
+        innovation: {
+          title: 'Innovation Continue',
+          description: 'Nous explorons sans cesse de nouvelles technologies pour concevoir des solutions modernes, performantes et durables.',
+        },
+        collaboration: {
+          title: 'Collaboration Transparente',
+          description: 'Chaque projet est un partenariat. Nous avançons main dans la main avec nos clients pour comprendre leurs besoins, leurs défis et leurs ambitions.',
+        },
+        excellence: {
+          title: 'Excellence Technique',
+          description: 'De la première ligne de code au déploiement final, nous livrons chaque projet avec rigueur, passion et souci du détail.',
+        },
+      },
+    },
+    stats: {
+      projects: 'Projets réalisés',
+      experience: 'Années d\'expérience',
+      clients: 'Clients satisfaits et accompagnés',
+      support: 'Support dédié et réactif',
+    },
+    team: {
+      title: 'Notre Équipe',
+      subtitle: 'Des experts passionnés qui transforment vos idées en réalité',
+    },
+    cta: {
+      title: 'On commence quand ?',
+      subtitle: 'Ensemble, transformons vos idées en solutions numériques durables.',
+      contact: 'Nous Contacter',
+      services: 'Nos Services',
     },
   },
 } as const 

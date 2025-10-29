@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Figtree } from 'next/font/google'
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { LocaleProvider } from "@/lib/locale-context"
 
 const inter = Inter({ subsets: ["latin"] })
 const figtree = Figtree({ 
@@ -55,10 +56,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html>
       <body className={`${figtree.className} ${figtree.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
+          <LocaleProvider>
+            {children}
+          </LocaleProvider>
         </ThemeProvider>
       </body>
     </html>

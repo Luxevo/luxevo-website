@@ -15,17 +15,18 @@ import FeaturesSection from "@/components/features-section"
 import StructuredData from "@/components/structured-data"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { useTranslations, defaultLocale, type Locale } from "@/lib/i18n"
+import { useTranslations } from "@/lib/i18n"
+import { useLocale } from "@/lib/locale-context"
 import Link from "next/link"
 
 export default function Home() {
-  const [locale, setLocale] = React.useState<Locale>(defaultLocale)
+  const { locale } = useLocale()
   const t = useTranslations(locale)
 
   return (
 
     <>
-            <Navbar locale={locale} onLocaleChange={setLocale} />
+            <Navbar />
 
       <StructuredData />
       <div className="flex min-h-screen flex-col">
@@ -90,7 +91,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="border-2 border-[#1A2234] text-[#1A2234] hover:bg-[#1A2234] hover:text-white px-8 py-4 rounded-xl text-lg font-medium">
-                  <Link href="/our-work">
+                  <Link href="#features">
                     {t.hero.viewWork}
                   </Link>
                 </Button>
@@ -224,7 +225,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 bg-muted/50 dark:bg-muted/10" aria-labelledby="contact-heading">
+        <section id="contact" className="pb-20 bg-muted/50 dark:bg-muted/10" aria-labelledby="contact-heading">
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">

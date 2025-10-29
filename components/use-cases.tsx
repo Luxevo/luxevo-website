@@ -99,10 +99,10 @@ export default function UseCases({ locale }: UseCasesProps) {
               <Card className="h-full bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg dark:bg-background/80">
                 <CardHeader className="pb-2">
                   <FrostedGlassIcon icon={useCase.icon} color={useCase.accentColor} className="mb-4" />
-                  <CardTitle>{useCase.title}</CardTitle>
+                  <CardTitle className="text-lg">{useCase.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{useCase.description}</CardDescription>
+                  <CardDescription className="text-sm">{useCase.description}</CardDescription>
                 </CardContent>
               </Card>
             </motion.div>
