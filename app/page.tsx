@@ -99,326 +99,115 @@ export default function Home() {
           </div>        
         </section>
 
-        {/* Features Section */}
-        <FeaturesSection locale={locale} />
+         {/* Features Section */}
+         <FeaturesSection locale={locale} />
 
-        {/* Use Cases */}
-        <UseCases locale={locale} />
+         {/* Trusted Companies Section */}
+         <section className="py-20 bg-muted/60 dark:bg-muted/15 relative">
+           <div className="container px-4 md:px-6">
+             <div className="text-center mb-12">
+               <h2 className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                 Ils nous font confiance
+               </h2>
+               <p className="text-muted-foreground md:text-xl ">
+                 Des entreprises de tous secteurs nous font confiance pour leurs projets numériques
+               </p>
+             </div>
+             
+             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center relative">
+               {/* UPGR8 */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/clients-logo/upgr8-logo.png" 
+                   alt="UPGR8 Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* Gosholo */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/clients-logo/gosholo-logo.png" 
+                   alt="Gosholo Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* Prestige Media */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/Logo_prestige-media.png" 
+                   alt="Prestige Media Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* Mordu Sport */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/clients-logo/mordu-sport-logo.png" 
+                   alt="Mordu Sport Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* Heritage Chiropractice */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/logoheritage.png" 
+                   alt="Heritage Chiropractice Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
 
-        {/* Partners & Clients */}
-        <section id="partners" className="py-20 bg-muted/30 dark:bg-muted/10" aria-labelledby="partners-heading">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-brand-orange px-3 py-1 text-sm text-white mb-2">
-                  {t.partners.badge}
-                </div>
-                <h2 id="partners-heading" className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl">
-                  {t.partners.title}
-                </h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  {t.partners.subtitle}
-                </p>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden">
-              <motion.div
-                className="flex gap-8"
-                animate={{ x: [0, -1200] }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                }}
-              >
-                
-     
-                {/* UPGR8 */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/upgr8-logo.png" 
-                        alt="UPGR8 Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">UPGR8</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Gosholo */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/gosholo-logo.png" 
-                        alt="Gosholo Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Gosholo</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.mobileApp}
-                    </span>
-                  </div>
-                </div>
-           {/* Desjardins */}
-           <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/desjardins-logo.png" 
-                        alt="Desjardins Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Desjardins</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-                {/* Mordu Sport */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/mordu-sport-logo.png" 
-                        alt="Mordu Sport Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Mordu Sport</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.mobileApp}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Webnique */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/webnique-logo.png" 
-                        alt="Webnique Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Webnique</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      {t.partners.tags.webAgency}
-                    </span>
-                  </div>
-                </div>
-                {/* Radio Canada */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/radio-canada-logo.png" 
-                        alt="Radio Canada Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Radio Canada</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-                {/* WELPCO */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/welpco-logo.png" 
-                        alt="WELPCO Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">WELPCO</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Duplicate items for seamless loop */}
-                
-        
-                {/* UPGR8 */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/upgr8-logo.png" 
-                        alt="UPGR8 Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">UPGR8</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Gosholo */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/gosholo-logo.png" 
-                        alt="Gosholo Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Gosholo</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.mobileApp}
-                    </span>
-                  </div>
-                </div>
-           {/* Desjardins */}
-           <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/desjardins-logo.png" 
-                        alt="Desjardins Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Desjardins</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-                {/* Mordu Sport */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/mordu-sport-logo.png" 
-                        alt="Mordu Sport Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Mordu Sport</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.mobileApp}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Webnique */}
-              <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/webnique-logo.png" 
-                        alt="Webnique Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Webnique</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      {t.partners.tags.webAgency}
-                    </span>
-                  </div>
-                </div>
-             {/* Radio Canada */}
-             <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/radio-canada-logo.png" 
-                        alt="Radio Canada Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">Radio Canada</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-                {/* WELPCO */}
-                <div className="flex-shrink-0 w-64">
-                  <div className="flex flex-col items-center space-y-4 group">
-                    <div className="h-32 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 p-4 border border-gray-100">
-                      <Image 
-                        width={150}
-                        height={150}
-                        src="/clients-logo/welpco-logo.png" 
-                        alt="WELPCO Logo" 
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-base font-semibold text-center">WELPCO</p>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      {t.partners.tags.saasPlatform}
-                    </span>
-                  </div>
-                </div>
-
-              </motion.div>
-            </div>
-
-            {/* Partnership Stats */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">{t.common.projectsDelivered}</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-primary">95%</div>
-                <div className="text-sm text-muted-foreground">{t.common.clientSatisfaction}</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">{t.common.yearsPartnership}</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">{t.common.supportAvailable}</div>
-              </div>
-            </div>
-          </div>
-        </section>
+               {/* Desjardins */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/clients-logo/desjardins-logo.png" 
+                   alt="Desjardins Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* Radio Canada */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/clients-logo/radio-canada-logo.png" 
+                   alt="Radio Canada Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+               
+               {/* FMM */}
+               <div className="flex items-center justify-center h-20 w-32">
+                 <Image 
+                   width={120}
+                   height={60}
+                   src="/fmm.png" 
+                   alt="FMM Logo" 
+                   className="object-contain transition-all duration-300 hover:scale-105"
+                 />
+               </div>
+             </div>
+             
+             {/* Fade effect to white at bottom */}
+             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+           </div>
+         </section>
 
         {/* Testimonials */}
         <Testimonials locale={locale} />
@@ -428,32 +217,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
 
 
-            {/* Guarantees and Benefits */}
-            <div className="bg-muted/30 dark:bg-muted/10 rounded-2xl p-8 mb-16">
-              <h3 className="text-2xl font-boldonse text-center mb-8">{t.common.guaranteesBenefits}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="flex flex-col items-center text-center">
-                  <Users className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">{t.common.provenResults}</h4>
-                  <p className="text-sm text-muted-foreground">{t.common.successfulDeliveries}</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <Database className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">{t.common.costReduction}</h4>
-                  <p className="text-sm text-muted-foreground">{t.common.typicalCloudSavings}</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <Bot className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">{t.common.fasterDeployment}</h4>
-                  <p className="text-sm text-muted-foreground">{t.common.deploymentSpeeds}</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <Shield className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-2">{t.common.uptime}</h4>
-                  <p className="text-sm text-muted-foreground">{t.common.achievementTarget}</p>
-                </div>
-              </div>
-            </div>
+          
 
 
           </div>

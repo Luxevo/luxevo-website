@@ -13,7 +13,11 @@ export const en = {
     subtitle: "From web apps to mobile platforms, SaaS solutions to automation systems - we handle your complete technical journey with proven results and rapid delivery.",
     startProject: 'Start Your Project',
     freeConsultation: 'Get In Touch',
-    viewWork: 'View Our Work',
+    viewWork: 'View our services',
+  },
+  // Trust Section
+  trust: {
+    title: 'From planning to launch, Luxévo accompanies you at every step to build a solid and lasting digital presence.',
   },
   // Features Section
   features: {
@@ -78,23 +82,6 @@ export const en = {
       },
     },
   },
-  // Partners Section
-  partners: {
-    badge: 'Partners & Clients',
-    title: 'Trusted by Leading Companies',
-    subtitle: 'We\'ve partnered with innovative companies across Quebec and beyond to deliver exceptional technical solutions.',
-    stats: {
-      years: 'Years Partnership',
-      projects: 'Projects Delivered',
-      clients: 'Happy Clients',
-      uptime: 'Uptime Guarantee',
-    },
-    tags: {
-      saasPlatform: 'SaaS Platform',
-      mobileApp: 'Mobile App',
-      webAgency: 'Web Agency',
-    },
-  },
   // Packages Section
   packages: {
     badge: 'Pricing',
@@ -156,7 +143,7 @@ export const en = {
   // Testimonials Section
   testimonials: {
     badge: 'Testimonials',
-    title: 'Trusted by Quebec Startups',
+    title: 'Trusted by Local Companies',
     subtitle: 'See what our clients say about their development and automation results.',
     items: [
       {
@@ -339,6 +326,17 @@ export const en = {
         '24/7 monitoring & support',
         'Custom integrations',
       ],
+    },
+  },
+  // Partners Section
+  partners: {
+    badge: 'Partners',
+    title: 'Trusted by Leading Companies',
+    subtitle: 'We are proud to collaborate with innovative companies that trust us for their digital projects.',
+    tags: {
+      saasPlatform: 'SaaS Platform',
+      mobileApp: 'Mobile App',
+      webAgency: 'Web Agency',
     },
   },
 } as const 

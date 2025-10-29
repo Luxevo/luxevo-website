@@ -13,7 +13,11 @@ export const fr = {
     subtitle: 'Des applications web aux plateformes mobiles, des solutions SaaS aux systèmes d\'automatisation - nous gérons votre parcours technique complet avec des résultats prouvés et une livraison rapide.',
     startProject: 'Démarrer Votre Projet',
     freeConsultation: 'Consultation gratuite',
-    viewWork: 'Voir Nos Réalisations',
+    viewWork: 'Voir nos services',
+  },
+  // Trust Section
+  trust: {
+    title: 'De la planification à la mise en ligne, Luxévo vous accompagne à chaque étape pour bâtir une présence numérique solide et durable.',
   },
   // Features Section
   features: {
@@ -78,23 +82,6 @@ export const fr = {
       },
     },
   },
-  // Partners Section
-  partners: {
-    badge: 'Partenaires & Clients',
-    title: 'Approuvé par les Entreprises Leaders',
-    subtitle: 'Nous avons collaboré avec des entreprises innovantes à travers le Québec et au-delà pour livrer des solutions techniques exceptionnelles.',
-    stats: {
-      years: 'Années de Partenariat',
-      projects: 'Projets Livrés',
-      clients: 'Clients Satisfaits',
-      uptime: 'Garantie de Disponibilité',
-    },
-    tags: {
-      saasPlatform: 'Plateforme SaaS',
-      mobileApp: 'Application Mobile',
-      webAgency: 'Agence Web',
-    },
-  },
   // Packages Section
   packages: {
     badge: 'Tarification',
@@ -156,7 +143,7 @@ export const fr = {
   // Testimonials Section
   testimonials: {
     badge: 'Témoignages',
-    title: 'Approuvé par les Startups du Québec',
+    title: 'Approuvé par les Entreprises d\'ici',
     subtitle: 'Découvrez ce que nos clients disent de leurs résultats de développement et d\'automatisation.',
     items: [
       {
@@ -339,6 +326,17 @@ export const fr = {
         'Surveillance et support 24/7',
         'Intégrations personnalisées',
       ],
+    },
+  },
+  // Partners Section
+  partners: {
+    badge: 'Partenaires',
+    title: 'Entreprises qui nous font confiance',
+    subtitle: 'Nous sommes fiers de collaborer avec des entreprises innovantes qui nous font confiance pour leurs projets numériques.',
+    tags: {
+      saasPlatform: 'Plateforme SaaS',
+      mobileApp: 'Application Mobile',
+      webAgency: 'Agence Web',
     },
   },
 } as const 
