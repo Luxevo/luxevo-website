@@ -116,38 +116,38 @@ export default function Home() {
              </div>
              
              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center relative">
-               {/* UPGR8 */}
-               <div className="flex items-center justify-center h-20 w-32">
-                 <Image 
-                   width={120}
-                   height={60}
-                   src="/clients-logo/upgr8-logo.png" 
-                   alt="UPGR8 Logo" 
-                   className="object-contain transition-all duration-300 hover:scale-105"
-                 />
-               </div>
+              {/* UPGR8 */}
+              <div className="flex items-center justify-center h-28 w-44">
+                <Image 
+                  width={160}
+                  height={80}
+                  src="/clients-logo/upgr8-logo.png" 
+                  alt="UPGR8 Logo" 
+                  className="object-contain transition-all duration-300 hover:scale-105"
+                />
+              </div>
                
-               {/* Gosholo */}
-               <div className="flex items-center justify-center h-20 w-32">
-                 <Image 
-                   width={120}
-                   height={60}
-                   src="/clients-logo/gosholo-logo.png" 
-                   alt="Gosholo Logo" 
-                   className="object-contain transition-all duration-300 hover:scale-105"
-                 />
-               </div>
+              {/* Gosholo */}
+              <div className="flex items-center justify-center h-28 w-44">
+                <Image 
+                  width={160}
+                  height={80}
+                  src="/clients-logo/gosholo-logo.png" 
+                  alt="Gosholo Logo" 
+                  className="object-contain transition-all duration-300 hover:scale-105"
+                />
+              </div>
                
-               {/* Prestige Media */}
-               <div className="flex items-center justify-center h-20 w-32">
-                 <Image 
-                   width={120}
-                   height={60}
-                   src="/Logo_prestige-media.png" 
-                   alt="Prestige Media Logo" 
-                   className="object-contain transition-all duration-300 hover:scale-105"
-                 />
-               </div>
+              {/* Prestige Media */}
+              <div className="flex items-center justify-center h-28 w-44">
+                <Image 
+                  width={160}
+                  height={80}
+                  src="/Logo_prestige-media.png" 
+                  alt="Prestige Media Logo" 
+                  className="object-contain transition-all duration-300 hover:scale-105"
+                />
+              </div>
                
                {/* Mordu Sport */}
                <div className="flex items-center justify-center h-20 w-32">

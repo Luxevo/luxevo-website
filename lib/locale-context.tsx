@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect, Suspense } from 'react'
 import { useSearchParams, usePathname } from 'next/navigation'
 import { type Locale } from '@/lib/i18n'
 
@@ -11,21 +11,23 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
-export function LocaleProvider({ children }: { children: React.ReactNode }) {
+// Internal component that uses useSearchParams - must be wrapped in Suspense
+function LocaleSync({ onLocaleChange }: { onLocaleChange: (locale: Locale) => void }) {
   const searchParams = useSearchParams()
-  const pathname = usePathname()
-  const [locale, setLocale] = useState<Locale>(() => {
-    const lang = searchParams.get('lang') as Locale
-    return lang && ['en', 'fr'].includes(lang) ? lang : 'fr'
-  })
 
-  // Update locale when URL changes
   useEffect(() => {
     const lang = searchParams.get('lang') as Locale
     if (lang && ['en', 'fr'].includes(lang)) {
-      setLocale(lang)
+      onLocaleChange(lang)
     }
-  }, [searchParams])
+  }, [searchParams, onLocaleChange])
+
+  return null
+}
+
+export function LocaleProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const [locale, setLocale] = useState<Locale>('fr')
 
   // Listen for browser back/forward navigation
   useEffect(() => {
@@ -52,6 +54,9 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale: handleSetLocale }}>
+      <Suspense fallback={null}>
+        <LocaleSync onLocaleChange={setLocale} />
+      </Suspense>
       {children}
     </LocaleContext.Provider>
   )
