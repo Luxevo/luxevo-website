@@ -75,20 +75,20 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
     },
     {
       icon: <ShopIcon />,
-      title: "Plateforme E-commerce Complète",
-      description: "Boutiques en ligne modernes avec gestion des produits, panier, paiements sécurisés, et analytics avancées pour maximiser vos ventes.",
+      title: t.featuresContent.ecommercePlatform.title,
+      description: t.featuresContent.ecommercePlatform.description,
       accentColor: "rgba(249, 115, 22, 0.5)",
     },
     {
       icon: <DesignIcon />,
-      title: "UX/UI Design",
-      description: "Design d'interface utilisateur et expérience utilisateur optimisée pour créer des produits digitaux intuitifs, accessibles et engageants.",
+      title: t.featuresContent.uxuiDesign.title,
+      description: t.featuresContent.uxuiDesign.description,
       accentColor: "rgba(168, 85, 247, 0.5)",
     },
     {
       icon: <BrandIcon />,
-      title: "Identité de Marque",
-      description: "Création d'identité visuelle complète, logo, charte graphique et guidelines de marque pour établir une présence forte et cohérente.",
+      title: t.featuresContent.brandIdentity.title,
+      description: t.featuresContent.brandIdentity.description,
       accentColor: "rgba(255, 107, 107, 0.5)",
     },
     {

@@ -4,7 +4,7 @@ export const en = {
     ourServices: 'Services',
     ourWork: 'Projects',
     specializations: 'Specializations',
-    about: 'About',
+    about: 'About us',
     contact: 'Contact',
   },
   // Hero Section
@@ -205,7 +205,7 @@ export const en = {
       caseStudies: 'Case Studies',
       blog: 'Blog',
       support: 'Support',
-      about: 'About',
+      about: 'About us',
       careers: 'Careers',
       privacy: 'Privacy Policy',
     },
@@ -293,6 +293,18 @@ export const en = {
       title: 'AI Integration',
       description: 'Intelligent features, chatbots, and AI-powered automation to enhance user experience and operational efficiency.',
     },
+    ecommercePlatform: {
+      title: 'Complete E-commerce Platform',
+      description: 'Modern online stores with product management, shopping cart, secure payments, and advanced analytics to maximize your sales.',
+    },
+    uxuiDesign: {
+      title: 'UX/UI Design',
+      description: 'User interface design and optimized user experience to create intuitive, accessible and engaging digital products.',
+    },
+    brandIdentity: {
+      title: 'Brand Identity',
+      description: 'Complete visual identity creation, logo, graphic charter and brand guidelines to establish a strong and consistent presence.',
+    },
   },
   // Packages content
   packagesContent: {
@@ -328,6 +340,11 @@ export const en = {
         'Custom integrations',
       ],
     },
+  },
+  // Trusted Companies Section
+  trustedCompanies: {
+    title: 'They trust us',
+    subtitle: 'Companies from all sectors trust us for their digital projects',
   },
   // Partners Section
   partners: {
@@ -367,7 +384,7 @@ export const en = {
       projects: 'Projects completed',
       experience: 'Years of experience',
       clients: 'Satisfied and supported clients',
-      support: 'Dedicated and responsive support',
+      support: 'Dedicated support',
     },
     team: {
       title: 'Our Team',

@@ -96,17 +96,17 @@ export default function About() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="text-center">
                         <div className="text-3xl font-bold text-brand-blue mb-2">30+</div>
-                        <div className="text-sm text-muted-foreground font-medium">Projets réalisés</div>
+                        <div className="text-sm text-muted-foreground font-medium">{t.about.stats.projects}</div>
                       </div>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-brand-blue mb-2">6</div>
-                        <div className="text-sm text-muted-foreground font-medium">Années d'expérience</div>
+                        <div className="text-sm text-muted-foreground font-medium">{t.about.stats.experience}</div>
                       </div>
                         <div className="text-center">
-                          <div className="text-xl font-boldonse text-brand-blue mb-2">Clients satisfaits<br />et accompagnés</div>
+                          <div className="text-xl font-boldonse text-brand-blue mb-2">{t.about.stats.clients}</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-xl font-boldonse text-brand-blue mb-2">Support dédié<br />et réactif</div>
+                          <div className="text-xl font-boldonse text-brand-blue mb-2">{t.about.stats.support}</div>
                         </div>
                     </div>
                   </div>

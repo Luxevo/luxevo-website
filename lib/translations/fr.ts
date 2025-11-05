@@ -293,6 +293,18 @@ export const fr = {
       title: 'Intégration IA',
       description: 'Fonctionnalités intelligentes, chatbots et automatisation alimentée par l\'IA pour améliorer l\'expérience utilisateur et l\'efficacité opérationnelle.',
     },
+    ecommercePlatform: {
+      title: 'Plateforme E-commerce Complète',
+      description: 'Boutiques en ligne modernes avec gestion des produits, panier, paiements sécurisés, et analytics avancées pour maximiser vos ventes.',
+    },
+    uxuiDesign: {
+      title: 'UX/UI Design',
+      description: 'Design d\'interface utilisateur et expérience utilisateur optimisée pour créer des produits digitaux intuitifs, accessibles et engageants.',
+    },
+    brandIdentity: {
+      title: 'Identité de Marque',
+      description: 'Création d\'identité visuelle complète, logo, charte graphique et guidelines de marque pour établir une présence forte et cohérente.',
+    },
   },
   // Packages content
   packagesContent: {
@@ -328,6 +340,11 @@ export const fr = {
         'Intégrations personnalisées',
       ],
     },
+  },
+  // Trusted Companies Section
+  trustedCompanies: {
+    title: 'Ils nous font confiance',
+    subtitle: 'Des entreprises de tous secteurs nous font confiance pour leurs projets numériques',
   },
   // Partners Section
   partners: {

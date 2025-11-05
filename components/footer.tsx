@@ -59,17 +59,17 @@ export default function Footer({ locale = 'en' }: FooterProps) {
                 </li>
                 <li>
                   <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                    Plateforme E-commerce Complète
+                    {t.featuresContent.ecommercePlatform.title}
                   </Link>
                 </li>
                 <li>
                   <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                    UX/UI Design
+                    {t.featuresContent.uxuiDesign.title}
                   </Link>
                 </li>
                 <li>
                   <Link href="#features" className="text-muted-foreground hover:text-foreground">
-                    Identité de Marque
+                    {t.featuresContent.brandIdentity.title}
                   </Link>
                 </li>
                 <li>
