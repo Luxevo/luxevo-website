@@ -110,7 +110,7 @@ export default function Footer({ locale = 'en' }: FooterProps) {
                 href="#contact" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                Contactez-nous
+                {t.footer.contactUs}
               </Link>
             </div>
           </div>

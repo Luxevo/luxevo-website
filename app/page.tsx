@@ -77,11 +77,8 @@ export default function Home() {
           <div className="container px-4 md:px-6 py-20 relative z-10">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Title with arrow */}
-              <h1 className="text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight">   
-                  Le digital
-                <br />
-                est à portée<br />
-                de mains 
+              <h1 className="text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight whitespace-pre-line">   
+                {t.hero.title}
               </h1>
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
