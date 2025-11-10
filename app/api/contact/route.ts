@@ -36,14 +36,10 @@ export async function POST(request: NextRequest) {
       firstName: sanitize(body.firstName || ''),
       lastName: sanitize(body.lastName || ''),
       email: body.email || '',
-      phone: sanitize(body.phone || ''),
-      company: sanitize(body.company || ''),
-      role: sanitize(body.role || ''),
-      size: sanitize(body.size || ''),
       message: sanitize(body.message || ''),
     };
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.company) {
+    if (!formData.firstName || !formData.lastName || !formData.email) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }

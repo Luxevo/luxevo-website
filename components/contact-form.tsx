@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { CheckCircle2, AlertCircle } from 'lucide-react'
@@ -25,10 +24,6 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
     firstName: '',
     lastName: '',
     email: '',
-    phone: '',
-    company: '',
-    role: '',
-    size: '',
     message: ''
   })
 
@@ -79,10 +74,6 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
               firstName: '',
               lastName: '',
               email: '',
-              phone: '',
-              company: '',
-              role: '',
-              size: '',
               message: ''
             })
           }}>{t.common.submitAnotherInquiry}</Button>
@@ -110,90 +101,40 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              <div className="space-y-2">
                <Label htmlFor="firstName">{t.common.firstName}</Label>
-               <Input 
-                 id="firstName" 
-                 placeholder="John" 
-                 required 
+               <Input
+                 id="firstName"
+                 placeholder="John"
+                 required
                  value={formData.firstName}
                  onChange={(e) => handleInputChange('firstName', e.target.value)}
                />
              </div>
              <div className="space-y-2">
                <Label htmlFor="lastName">{t.common.lastName}</Label>
-               <Input 
-                 id="lastName" 
-                 placeholder="Doe" 
-                 required 
+               <Input
+                 id="lastName"
+                 placeholder="Doe"
+                 required
                  value={formData.lastName}
                  onChange={(e) => handleInputChange('lastName', e.target.value)}
                />
              </div>
            </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-             <div className="space-y-2">
-               <Label htmlFor="email">{t.common.workEmail}</Label>
-               <Input 
-                 id="email" 
-                 type="email" 
-                 placeholder="john.doe@company.com" 
-                 required 
-                 value={formData.email}
-                 onChange={(e) => handleInputChange('email', e.target.value)}
-               />
-             </div>
-             <div className="space-y-2">
-               <Label htmlFor="phone">{t.common.phoneNumber}</Label>
-               <Input 
-                 id="phone" 
-                 type="tel" 
-                 placeholder="+1 (514) 555-0123" 
-                 value={formData.phone}
-                 onChange={(e) => handleInputChange('phone', e.target.value)}
-               />
-               <p className="text-xs text-muted-foreground">{t.common.fasterContact}</p>
-             </div>
+           <div className="space-y-2">
+             <Label htmlFor="email">{t.common.workEmail}</Label>
+             <Input
+               id="email"
+               type="email"
+               placeholder="john.doe@company.com"
+               required
+               value={formData.email}
+               onChange={(e) => handleInputChange('email', e.target.value)}
+             />
            </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-             <div className="space-y-2">
-               <Label htmlFor="company">{t.common.company}</Label>
-               <Input 
-                 id="company" 
-                 placeholder="Acme Inc." 
-                 required 
-                 value={formData.company}
-                 onChange={(e) => handleInputChange('company', e.target.value)}
-               />
-             </div>
-             <div className="space-y-2">
-               <Label htmlFor="role">{t.common.yourRole}</Label>
-               <Input 
-                 id="role" 
-                 placeholder="CTO, IT Director, etc." 
-                 required 
-                 value={formData.role}
-                 onChange={(e) => handleInputChange('role', e.target.value)}
-               />
-             </div>
-           </div>
-          <div className="space-y-2">
-            <Label htmlFor="size">{t.common.organizationSize}</Label>
-            <Select value={formData.size} onValueChange={(value) => handleInputChange('size', value)}>
-              <SelectTrigger id="size">
-                <SelectValue placeholder={t.common.selectOrgSize} />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1-10">{t.common.oneToTen}</SelectItem>
-                <SelectItem value="10-50">{t.common.tenToFifty}</SelectItem>
-                <SelectItem value="50+">{t.common.fiftyPlus}</SelectItem>
-                <SelectItem value="series-a">{t.common.seriesAB}</SelectItem>
-                <SelectItem value="pre-series">{t.common.preSeriesA}</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
           <div className="space-y-2">
             <Label htmlFor="message">{t.common.howCanWeHelp}</Label>
-            <Textarea 
-              id="message" 
+            <Textarea
+              id="message"
               placeholder={t.common.projectPlaceholder}
               rows={4}
               value={formData.message}
