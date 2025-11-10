@@ -29,14 +29,16 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
 
   // Track mouse movement
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const section = document.getElementById('features')
-      if (section) {
-        const rect = section.getBoundingClientRect()
-        setMousePosition({ 
-          x: e.clientX - rect.left, 
-          y: e.clientY - rect.top 
-        })
+    const handleMouseMove = (e: Event) => {
+      if (e instanceof MouseEvent) {
+        const section = document.getElementById('features')
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          setMousePosition({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+          })
+        }
       }
     }
 
