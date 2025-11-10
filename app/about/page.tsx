@@ -34,7 +34,7 @@ export default function About() {
                 <Badge className="mb-4 bg-brand-orange text-white">
                   {t.about.badge}
                 </Badge>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-boldonse mb-6">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-boldonse mb-6 px-4">
                   {t.about.title}
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -56,7 +56,7 @@ export default function About() {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-3xl font-boldonse mb-6">{t.about.mission.title}</h2>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-boldonse mb-6">{t.about.mission.title}</h2>
                   <p className="text-lg text-muted-foreground mb-6">
                     {t.about.mission.description}
                   </p>
@@ -128,7 +128,7 @@ export default function About() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-boldonse mb-4">{t.about.team.title}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-boldonse mb-4">{t.about.team.title}</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   {t.about.team.subtitle}
                 </p>
@@ -186,7 +186,7 @@ export default function About() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-boldonse mb-4">{t.about.cta.title}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-boldonse mb-4">{t.about.cta.title}</h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   {t.about.cta.subtitle}
                 </p>

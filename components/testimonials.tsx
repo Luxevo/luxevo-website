@@ -18,7 +18,7 @@ export default function Testimonials({ locale }: TestimonialsProps) {
             <div className="inline-block rounded-lg bg-brand-blue px-3 py-1 text-sm text-white mb-2">
               {t.testimonials.badge}
             </div>
-            <h2 className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="text-2xl font-boldonse tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl px-4">
               {t.testimonials.title}
             </h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">

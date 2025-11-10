@@ -77,7 +77,7 @@ export default function Home() {
           <div className="container px-4 md:px-6 py-20 relative z-10">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Title with arrow */}
-              <h1 className="text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight whitespace-pre-line">   
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight">
                 {t.hero.title}
               </h1>
               {/* CTA Buttons */}
@@ -104,7 +104,7 @@ export default function Home() {
          <section className="py-20 bg-muted/60 dark:bg-muted/15 relative">
            <div className="container px-4 md:px-6">
              <div className="text-center mb-12">
-               <h2 className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl mb-4">
+               <h2 className="text-2xl font-boldonse tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-4 px-4">
                  {t.trustedCompanies.title}
                </h2>
                <p className="text-muted-foreground md:text-xl ">
@@ -226,7 +226,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 id="contact-heading" className="text-3xl font-boldonse tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                <h2 id="contact-heading" className="text-2xl font-boldonse tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-4 px-4">
                   {t.contact.title}
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
