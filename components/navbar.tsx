@@ -60,13 +60,13 @@ export default function Navbar() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-white/10 backdrop-blur-md border-white/20">
+              <SheetContent side="right" className="bg-white/50 backdrop-blur-xl border-white/40">
                 <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile Navigation">
                   {navItems.map((item, index) => (
                     <Link
                       key={index}
                       href={item.href}
-                      className="text-lg font-medium px-5 py-3 rounded-full border border-transparent hover:bg-gradient-to-b hover:from-white/70 hover:to-white/50 hover:backdrop-blur-[120px] hover:backdrop-saturate-[180%] hover:backdrop-brightness-110 hover:shadow-[0_8px_30px_rgba(255,255,255,0.15),0_2px_10px_rgba(255,255,255,0.1),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.05)] hover:border-white/40 transition-all duration-300 ease-out"
+                      className="text-lg font-medium text-gray-800 px-5 py-3 rounded-full border border-transparent hover:bg-gradient-to-b hover:from-white/70 hover:to-white/50 hover:backdrop-blur-[120px] hover:backdrop-saturate-[180%] hover:backdrop-brightness-110 hover:shadow-[0_8px_30px_rgba(255,255,255,0.15),0_2px_10px_rgba(255,255,255,0.1),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.05)] hover:border-white/40 transition-all duration-300 ease-out"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}

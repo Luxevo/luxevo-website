@@ -77,7 +77,7 @@ export default function Home() {
           <div className="container px-4 md:px-6 py-20 relative z-10">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               {/* Title with arrow */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[68px] mb-8 font-boldonse text-[#1A2234] text-center leading-relaxed sm:leading-[1.75] md:leading-normal lg:leading-snug">
                 {t.hero.title}
               </h1>
               {/* CTA Buttons */}
