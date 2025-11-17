@@ -35,7 +35,7 @@ export default function FeatureCard({
       transition={{ duration: 0.5 }}
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Card className="h-full min-h-[200px] overflow-hidden bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg dark:bg-background/80">
+      <Card className="h-full min-h-[200px] overflow-hidden bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg">
         <div className="p-6 h-full flex flex-col relative z-10">
           <FrostedGlassIcon icon={icon} color={accentColor} className="mb-4 self-start" />
 
@@ -45,7 +45,7 @@ export default function FeatureCard({
 
         {/* Always visible animated gradient background */}
         <motion.div
-          className="absolute inset-0 z-0 opacity-20 dark:opacity-30"
+          className="absolute inset-0 z-0 opacity-20"
           initial={{ opacity: 0 }}
           animate={{
             background: [

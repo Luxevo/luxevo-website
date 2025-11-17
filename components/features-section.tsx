@@ -103,7 +103,7 @@ export default function FeaturesSection({ locale }: FeaturesSectionProps) {
 
   return (
     <section 
-      className="relative py-20 overflow-hidden bg-muted/60 dark:bg-muted/15 rounded-t-[3rem]" 
+      className="relative py-20 overflow-hidden bg-muted/60 rounded-t-[3rem]" 
       id="features" 
       aria-labelledby="features-heading"
       onMouseEnter={() => setIsHovering(true)}

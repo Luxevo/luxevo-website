@@ -24,7 +24,7 @@ export default function PrivacyPolicyTemplate({
   includeThirdPartyServices = [],
 }: PrivacyPolicyTemplateProps) {
   return (
-    <div className="prose prose-blue max-w-none dark:prose-invert">
+    <div className="prose prose-blue max-w-none">
       <h1>Privacy Policy</h1>
       <p>Last Updated: {lastUpdated}</p>
 

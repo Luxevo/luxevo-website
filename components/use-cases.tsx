@@ -67,7 +67,7 @@ export default function UseCases({ locale }: UseCasesProps) {
   }
 
   return (
-    <section id="use-cases" className="py-20 bg-gradient-to-b from-background to-muted/30 dark:from-background dark:to-muted/10">
+    <section id="use-cases" className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
@@ -96,7 +96,7 @@ export default function UseCases({ locale }: UseCasesProps) {
         >
           {useCases.map((useCase, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg dark:bg-background/80">
+              <Card className="h-full bg-background/60 backdrop-blur-sm border transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="pb-2">
                   <FrostedGlassIcon icon={useCase.icon} color={useCase.accentColor} className="mb-4" />
                   <CardTitle className="text-lg">{useCase.title}</CardTitle>

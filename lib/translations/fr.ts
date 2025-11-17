@@ -10,7 +10,7 @@ export const fr = {
   // Hero Section
   hero: {
     badge: 'Développement Full-Stack & Solutions Techniques',
-    title: 'Le digital\nest à portée\nde mains',
+    title: 'Le Digital Est à Portée de Mains',
     subtitle: 'Des applications web aux plateformes mobiles, des solutions SaaS aux systèmes d\'automatisation - nous gérons votre parcours technique complet avec des résultats prouvés et une livraison rapide.',
     startProject: 'Démarrer Votre Projet',
     freeConsultation: 'Consultation gratuite',
@@ -164,6 +164,24 @@ export const fr = {
         name: 'David Rodriguez',
         title: 'Chef de Produit, Plateforme E-commerce',
         avatar: 'DR',
+      },
+      {
+        quote: 'Nous avons demandé à Jolan et Jostin de créer une application pouvant nous aider avec la gestion financière des suivis patients et ils ont su répondre avec brio! Ils nous ont bien écouté lorsque nous leur avons expliqué le projet et ont vraiment excédé les attentes lors de la livraison du projet. Que ce soit la facilité d\'utilisation, la présentation visuelle ou l\'aspect facile sans "bog" de l\'application, tout du projet nous a ébloui. Nous vous recommandons grandement leur service et nous n\'hésiterons pas à leur demander quoi que ce soit qui est en lien avec le développement technologique de notre entreprise.',
+        name: 'Dr Gabriel Desrosiers',
+        title: 'Chiropraticien',
+        company: 'Heritage Chiropratique',
+        avatar: 'GD',
+        image: '',
+        link: 'https://heritagechiropratique.com',
+        linkText: 'Heritage Chiropratique',
+      },
+      {
+        quote: 'Luxévo fait un travail exceptionnel depuis le début de notre collaboration. Leur équipe est dédiée, rapide et vraiment engagée dans nos projets. Ils prennent le temps de comprendre nos besoins, proposent de bonnes solutions et livrent toujours avec sérieux. On travaille avec eux sur plusieurs applications complexes, et malgré les défis, ils donnent constamment leur 110 %. Leur communication est claire, ils sont fiables, et on sent qu\'ils veulent réellement que nos projets réussissent. Je recommande Luxévo à 100 %. C\'est une équipe talentueuse, passionnée et très professionnelle. Toute entreprise qui veut développer une application ou une plateforme web est entre bonnes mains avec eux.',
+        name: 'Équipe Mordu Sport',
+        title: 'Application Mobile Sportive',
+        company: 'Mordu Sport',
+        avatar: 'MS',
+        image: '',
       },
     ],
   },
@@ -344,7 +362,7 @@ export const fr = {
   },
   // Trusted Companies Section
   trustedCompanies: {
-    title: 'Ils nous font confiance',
+    title: 'Ils Nous Font Confiance',
     subtitle: 'Des entreprises de tous secteurs nous font confiance pour leurs projets numériques',
   },
   // Partners Section
@@ -361,7 +379,7 @@ export const fr = {
   // About page
   about: {
     badge: 'À Propos de Luxévo',
-    title: 'À propos de Luxévo',
+    title: 'À Propos de Luxévo',
     subtitle: 'Fondée en 2024, Luxévo s\'appuie sur plus de 6 ans d\'expérience combinée. Portée par une équipe passionnée, l\'entreprise transforme chaque idée en solution digitale sur mesure.',
     mission: {
       title: 'Notre Mission',

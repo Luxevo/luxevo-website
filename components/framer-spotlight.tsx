@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect } from "react"
 import { motion, useMotionValue, useSpring, animate } from "framer-motion"
-import { useTheme } from "next-themes"
 
 export default function FramerSpotlight() {
   const [isMounted, setIsMounted] = useState(false)
@@ -10,8 +9,6 @@ export default function FramerSpotlight() {
   const containerRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLElement | null>(null)
   const defaultPositionRef = useRef({ x: 0, y: 0 })
-  const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
 
   // Motion values for the spotlight position with spring physics
   const mouseX = useMotionValue(0)
@@ -23,9 +20,9 @@ export default function FramerSpotlight() {
 
   // Define multiple spotlight colors using your brand palette
   const spotlightColors = [
-    { color: "rgba(83, 97, 255, 0.2)", darkColor: "rgba(83, 97, 255, 0.25)" }, // Brand blue
-    { color: "rgba(254, 125, 83, 0.15)", darkColor: "rgba(254, 125, 83, 0.2)" }, // Brand orange
-    { color: "rgba(246, 237, 228, 0.15)", darkColor: "rgba(246, 237, 228, 0.1)" }, // Brand cream
+    "rgba(83, 97, 255, 0.2)", // Brand blue
+    "rgba(254, 125, 83, 0.15)", // Brand orange
+    "rgba(246, 237, 228, 0.15)", // Brand cream
   ]
 
   // Update default position without causing re-renders
@@ -112,9 +109,7 @@ export default function FramerSpotlight() {
       <motion.div
         className="absolute pointer-events-none"
         style={{
-          background: `radial-gradient(circle, ${
-            isDark ? spotlightColors[0].darkColor : spotlightColors[0].color
-          } 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${spotlightColors[0]} 0%, transparent 70%)`,
           width: "1000px",
           height: "1000px",
           borderRadius: "50%",
@@ -143,9 +138,7 @@ export default function FramerSpotlight() {
           repeatType: "reverse",
         }}
         style={{
-          background: `radial-gradient(circle, ${
-            isDark ? spotlightColors[1].darkColor : spotlightColors[1].color
-          } 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${spotlightColors[1]} 0%, transparent 70%)`,
           width: "800px",
           height: "800px",
           borderRadius: "50%",
@@ -168,9 +161,7 @@ export default function FramerSpotlight() {
           repeatType: "reverse",
         }}
         style={{
-          background: `radial-gradient(circle, ${
-            isDark ? spotlightColors[2].darkColor : spotlightColors[2].color
-          } 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${spotlightColors[2]} 0%, transparent 70%)`,
           width: "700px",
           height: "700px",
           borderRadius: "50%",
@@ -193,9 +184,7 @@ export default function FramerSpotlight() {
           repeatType: "reverse",
         }}
         style={{
-          background: `radial-gradient(circle, ${
-            isDark ? "rgba(168, 85, 247, 0.2)" : "rgba(168, 85, 247, 0.15)"
-          } 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%)`,
           width: "600px",
           height: "600px",
           borderRadius: "50%",
@@ -218,9 +207,7 @@ export default function FramerSpotlight() {
           delay: 2,
         }}
         style={{
-          background: `radial-gradient(circle, ${
-            isDark ? "rgba(251, 191, 36, 0.2)" : "rgba(251, 191, 36, 0.15)"
-          } 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%)`,
           width: "550px",
           height: "550px",
           borderRadius: "50%",

@@ -46,7 +46,7 @@ export default function About() {
         </section>
 
         {/* Mission Section */}
-        <section className="py-20 bg-muted/60 dark:bg-muted/15">
+        <section className="py-20 bg-muted/60">
           <div className="container px-4 md:px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

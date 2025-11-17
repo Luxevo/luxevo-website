@@ -4,7 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Bot, Database, Shield, Users, Zap } from 'lucide-react'
 import ContactForm from "@/components/contact-form"
-import Testimonials from "@/components/testimonials"
+import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import UseCases from "@/components/use-cases"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
@@ -101,7 +101,7 @@ export default function Home() {
          <FeaturesSection locale={locale} />
 
          {/* Trusted Companies Section */}
-         <section className="py-20 bg-muted/60 dark:bg-muted/15 relative">
+         <section className="py-20 bg-muted/60 relative">
            <div className="container px-4 md:px-6">
              <div className="text-center mb-12">
                <h2 className="text-2xl font-boldonse tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-4 px-4">
@@ -208,10 +208,12 @@ export default function Home() {
          </section>
 
         {/* Testimonials */}
-        <Testimonials locale={locale} />
+        <section className="py-20">
+          <StaggerTestimonials locale={locale} />
+        </section>
 
         {/* Service Packages Section */}
-        <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50 dark:from-background dark:to-muted/20" aria-labelledby="packages-heading">
+        <section id="packages" className="py-20 bg-gradient-to-b from-background to-muted/50" aria-labelledby="packages-heading">
           <div className="container px-4 md:px-6">
 
 
@@ -222,7 +224,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="pb-20 bg-muted/50 dark:bg-muted/10" aria-labelledby="contact-heading">
+        <section id="contact" className="pb-20 bg-muted/50" aria-labelledby="contact-heading">
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">

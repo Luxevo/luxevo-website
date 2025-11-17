@@ -10,7 +10,7 @@ export const en = {
   // Hero Section
   hero: {
     badge: 'Full-Stack Development & Technical Solutions',
-    title: "Digital\nat your\nFingertips",
+    title: "Digital at your Fingertips",
     subtitle: "From web apps to mobile platforms, SaaS solutions to automation systems - we handle your complete technical journey with proven results and rapid delivery.",
     startProject: 'Start Your Project',
     freeConsultation: 'Get In Touch',
@@ -164,6 +164,24 @@ export const en = {
         name: 'David Rodriguez',
         title: 'Head of Product, E-commerce Platform',
         avatar: 'DR',
+      },
+      {
+        quote: 'We asked Jolan and Jostin to create an application to help us with financial management of patient follow-ups, and they delivered brilliantly! They listened carefully when we explained the project and truly exceeded expectations upon delivery. Whether it\'s the ease of use, visual presentation, or the bug-free aspect of the application, everything about the project amazed us. We highly recommend their services and won\'t hesitate to turn to them for anything related to our company\'s technological development.',
+        name: 'Dr Gabriel Desrosiers',
+        title: 'Chiropractor',
+        company: 'Heritage Chiropractic',
+        avatar: 'GD',
+        image: '',
+        link: 'https://heritagechiropratique.com',
+        linkText: 'Heritage Chiropractic',
+      },
+      {
+        quote: 'Luxévo has been doing exceptional work since the start of our collaboration. Their team is dedicated, fast, and truly committed to our projects. They take the time to understand our needs, propose great solutions, and always deliver with professionalism. We work with them on several complex applications, and despite the challenges, they consistently give their 110%. Their communication is clear, they are reliable, and you can feel that they genuinely want our projects to succeed. I recommend Luxévo 100%. They are a talented, passionate, and highly professional team. Any company looking to develop an application or web platform is in good hands with them.',
+        name: 'Mordu Sport Team',
+        title: 'Mobile Sports App',
+        company: 'Mordu Sport',
+        avatar: 'MS',
+        image: '',
       },
     ],
   },
@@ -344,7 +362,7 @@ export const en = {
   },
   // Trusted Companies Section
   trustedCompanies: {
-    title: 'They trust us',
+    title: 'They Trust Us',
     subtitle: 'Companies from all sectors trust us for their digital projects',
   },
   // Partners Section
