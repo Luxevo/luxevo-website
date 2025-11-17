@@ -1,8 +1,6 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { useTheme } from "next-themes"
-import { useState, useEffect } from "react"
 
 interface FrostedGlassIconProps {
   icon: ReactNode
@@ -17,36 +15,21 @@ export default function FrostedGlassIcon({
   size = "md",
   className = "",
 }: FrostedGlassIconProps) {
-  const [mounted, setMounted] = useState(false)
-  const { resolvedTheme } = useTheme()
-  
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   const sizeClasses = {
     sm: "w-10 h-10",
     md: "w-12 h-12",
     lg: "w-14 h-14",
   }
 
-  // Use default light theme styles until mounted to prevent hydration mismatch
-  const isDark = mounted && resolvedTheme === "dark"
-
   return (
     <div
       className={`relative rounded-xl flex items-center justify-center ${sizeClasses[size]} ${className}`}
       style={{
-        background: isDark
-          ? `linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))`
-          : `linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4))`,
+        background: `linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4))`,
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
-        border: isDark ? `1px solid rgba(255, 255, 255, 0.1)` : `1px solid rgba(255, 255, 255, 0.7)`,
-        boxShadow: isDark
-          ? `0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1)`
-          : `0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.7)`,
+        border: `1px solid rgba(255, 255, 255, 0.7)`,
+        boxShadow: `0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.7)`,
       }}
     >
       <div className="absolute inset-0 rounded-xl overflow-hidden">

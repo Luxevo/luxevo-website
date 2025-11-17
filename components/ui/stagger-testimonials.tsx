@@ -50,7 +50,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
         transform: `
           translate(-50%, -50%)
-          translateX(${(cardSize / 1.5) * position}px)
+          translateX(${position * (cardSize + 40)}px)
           translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
           rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
         `,
@@ -158,6 +158,10 @@ export const StaggerTestimonials: React.FC<StaggerTestimonialsProps> = ({ locale
         const position = testimonialsList.length % 2
           ? index - (testimonialsList.length + 1) / 2
           : index - testimonialsList.length / 2;
+
+        // Only show center card and 1 card on each side (total 3 visible)
+        if (Math.abs(position) > 1) return null;
+
         return (
           <TestimonialCard
             key={testimonial.tempId}

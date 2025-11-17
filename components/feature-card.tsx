@@ -3,7 +3,6 @@
 import type { ReactNode } from "react"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { useTheme } from "next-themes"
 import FrostedGlassIcon from "./frosted-glass-icon"
 
 interface FeatureCardProps {
@@ -19,13 +18,6 @@ export default function FeatureCard({
   description,
   accentColor = "rgba(120, 120, 255, 0.5)",
 }: FeatureCardProps) {
-  const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
-
-  // Adjust accent color opacity for dark mode
-  const adjustedAccentColor = isDark
-    ? accentColor.replace(/rgba$$(\d+),\s*(\d+),\s*(\d+),\s*[\d.]+$$/, "rgba($1, $2, $3, 0.3)")
-    : accentColor
 
   return (
     <motion.div
@@ -49,8 +41,8 @@ export default function FeatureCard({
           initial={{ opacity: 0 }}
           animate={{
             background: [
-              `radial-gradient(circle at 30% 30%, ${adjustedAccentColor} 0%, transparent 60%)`,
-              `radial-gradient(circle at 70% 70%, ${adjustedAccentColor} 0%, transparent 60%)`,
+              `radial-gradient(circle at 30% 30%, ${accentColor} 0%, transparent 60%)`,
+              `radial-gradient(circle at 70% 70%, ${accentColor} 0%, transparent 60%)`,
             ],
             opacity: [0.15, 0.25, 0.15],
           }}
