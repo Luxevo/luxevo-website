@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Figtree } from 'next/font/google'
 import "./globals.css"
 import { LocaleProvider } from "@/lib/locale-context"
+import CookieConsent from "@/components/cookie-consent"
 
 const inter = Inter({ subsets: ["latin"] })
 const figtree = Figtree({ 
@@ -55,10 +56,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${figtree.className} ${figtree.variable}`}>
         <LocaleProvider>
           {children}
+          <CookieConsent />
         </LocaleProvider>
       </body>
     </html>
